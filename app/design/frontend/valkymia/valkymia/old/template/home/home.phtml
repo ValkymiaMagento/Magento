@@ -1,0 +1,21 @@
+<!-- Sliders en home_slider.phtml -->
+<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('slider_principal')->toHtml(); ?>
+
+<div class="info-slider">
+	<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('info_slider_home_valkymia')->toHtml(); ?>
+</div>
+
+<div class="content-home">
+	<!-- BLOQUE DE LA HOME -->
+	<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('bloques_home_valkymia')->toHtml(); ?>
+
+	<!-- DESTACADOS HOME -->
+	<?php  $destacadoHome = Mage::getModel('cms/block')->load('destacados_home_valkymia')->getIsActive() ?>
+	<?php if (count($destacadoHome) > 0): ?>
+		<div class="bloques-home">
+			<div class="destacados-home">
+				<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('destacados_home_valkymia')->toHtml(); ?>
+			</div>
+		</div>
+	<?php endif; ?>
+</div>
