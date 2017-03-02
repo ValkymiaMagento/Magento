@@ -79,8 +79,18 @@ $mq-fixed-value: 1024;
 .scaffold-form input[type=password],
 .scaffold-form input[type=tel],
 .scaffold-form input[type=text] {
-  width: 330px;
+  width: 600px;
   max-width: 100%;
+}
+.scaffold-form select:focus,
+.scaffold-form textarea:focus,
+.scaffold-form input[type=email]:focus,
+.scaffold-form input[type=search]:focus,
+.scaffold-form input[type=number]:focus,
+.scaffold-form input[type=password]:focus,
+.scaffold-form input[type=tel]:focus,
+.scaffold-form input[type=text]:focus {
+  outline: none;
 }
 .scaffold-form .input-box {
   float: left;

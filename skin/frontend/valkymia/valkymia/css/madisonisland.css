@@ -316,6 +316,15 @@ body .promos > li {
   border-color: #ffffff;
   outline: 1px solid #000;
 }
+.catalogsearch-result-index .amconf-block .amconf-image-container > img,
+.catalog-category-view .amconf-block .amconf-image-container > img {
+  border: 1px solid #e6e6e6;
+}
+.catalogsearch-result-index .amconf-block .amconf-image-container > img.amconf-image-selected,
+.catalog-category-view .amconf-block .amconf-image-container > img.amconf-image-selected {
+  border-color: #ffffff;
+  outline: 1px solid #000;
+}
 
 .catalog-category-view div.categoryland-caption {
   display: block;

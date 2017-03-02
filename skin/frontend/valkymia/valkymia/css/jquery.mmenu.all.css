@@ -258,6 +258,14 @@ a.mm-title {
   position: relative;
 }
 
+.mm-listview > li .mm-next {
+  background: #cccccc;
+}
+
+.mm-listview > li .mm-next:hover {
+  background-color: #454545 !important;
+}
+
 .mm-listview > li, .mm-listview > li .mm-next, .mm-listview > li .mm-next:before, .mm-listview > li:after {
   border-color: inherit;
 }

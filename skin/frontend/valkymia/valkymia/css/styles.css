@@ -501,6 +501,14 @@ textarea {
   font-size: 14px;
   line-height: 1.5;
 }
+body:focus,
+button:focus,
+input:focus,
+select:focus,
+table:focus,
+textarea:focus {
+  outline: none;
+}
 
 a {
   color: #1a1a1a;
@@ -513,7 +521,7 @@ a:hover {
 }
 
 a:focus {
-  outline-color: #131313;
+  outline-color: none;
   color: black;
 }
 
@@ -2470,6 +2478,16 @@ body.customer-account .data-table .show-details .summary-collapse:hover:before {
   width: auto;
 }
 
+.back-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  z-index: 900;
+}
+
 /* ============================================ *
  * FORMS - COMMON
  * ============================================ */
@@ -3515,7 +3533,7 @@ a.skip-link {
 @media only screen and (min-width: 1000px) {
   .nav-primary {
     display: block;
-    padding: 10px 0;
+    padding: 0;
     border-top: 1px solid #eeeeee;
     text-align: center;
   }
@@ -3538,7 +3556,8 @@ a.skip-link {
   position: relative;
 }
 .nav-primary li.level1 a {
-  border-bottom: 1px solid #CCCCCC;
+  border-bottom: 1px solid #eeeeee;
+  line-height: 30px;
 }
 
 .nav-primary .menu-active > ul.level0,
@@ -3568,6 +3587,9 @@ a.skip-link {
   }
   .nav-primary li.level0 li {
     padding: 0 0 0 25px;
+  }
+  .nav-primary li.level0 li.view-all {
+    display: none;
   }
   .nav-primary li.level1 a {
     padding: 0 15px 0 25px;
@@ -3621,6 +3643,7 @@ a.skip-link {
   }
   .nav-primary a.level0 {
     padding: 0 12px;
+    line-height: 35px;
   }
   .nav-primary li.level0,
   .nav-primary a.level0 {
@@ -3641,14 +3664,20 @@ a.skip-link {
     border: solid 1px #CCCCCC;
     position: absolute;
     left: 0;
-    top: 30px;
-    /* Height of ".nav-primary a.level0" */
+    top: 100%;
     z-index: 10;
     width: 250px;
     padding-left: 10px;
     padding-right: 10px;
     display: none;
     /* Hide until displayed. */
+    border-color: #eeeeee;
+    background: #ffffff;
+    text-align: left;
+    border-top: 0;
+  }
+  .nav-primary li.level0 ul.level0 li.view-all {
+    display: none;
   }
   .nav-primary li.level1 ul {
     left: 60px;
@@ -4513,6 +4542,11 @@ a.skip-link {
 .social-media-valkymia {
   padding: 30px 0;
   border-top: 1px solid #eeeeee;
+}
+.social-media-valkymia h4 {
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 1pt;
 }
 .social-media-valkymia .social-icons {
   text-align: center;
@@ -9021,9 +9055,6 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
 /* ============================================ *
  * Customer
  * ============================================ */
-.customer-account-login .scaffold-form label:first-child {
-  width: 115px;
-}
 .customer-account-login .col2-set .buttons-set {
   text-align: left;
   border-top: 0;
@@ -9153,7 +9184,145 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
 .customer-account-forgotpassword .fieldset .input-box input.input-text {
   width: 100%;
 }
+.customer-account-forgotpassword .form-instructions {
+  text-align: center;
+  font-weight: 300;
+  font-style: normal;
+  color: #000000;
+}
+.customer-account-forgotpassword .back-link {
+  text-align: center;
+  font-weight: 600;
+  color: #000000;
+  font-size: 9pt;
+  font-family: "Lato", sans-serif;
+  padding-top: 15px;
+}
 
+.account-create > .scaffold-form,
+.registered-users {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 905;
+  background-color: #ffffff;
+}
+.account-create > .scaffold-form .imagen-users,
+.registered-users .imagen-users {
+  width: 50%;
+  border-right: 1px solid #9e9e9e;
+}
+.account-create > .scaffold-form .imagen-users p,
+.registered-users .imagen-users p {
+  margin: 0;
+  padding: 0;
+}
+.account-create > .scaffold-form .imagen-users img,
+.registered-users .imagen-users img {
+  width: 100%;
+}
+.account-create > .scaffold-form .inputs-users,
+.registered-users .inputs-users {
+  width: 50%;
+  padding: 25px 25px 0;
+  position: relative;
+}
+.account-create > .scaffold-form .inputs-users .cerrar_btn,
+.registered-users .inputs-users .cerrar_btn {
+  display: block;
+  background: url(../images/cerrar_btn.png);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 9;
+  font-size: 0;
+}
+.account-create > .scaffold-form .inputs-users .cerrar_btn a,
+.registered-users .inputs-users .cerrar_btn a {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.account-create > .scaffold-form .inputs-users.registro,
+.registered-users .inputs-users.registro {
+  padding-bottom: 25px;
+}
+.account-create > .scaffold-form .inputs-users .fieldset,
+.registered-users .inputs-users .fieldset {
+  margin-bottom: 15px;
+  margin-left: 0;
+}
+.account-create > .scaffold-form .inputs-users .img,
+.registered-users .inputs-users .img {
+  margin: 0 auto 20px;
+  width: 96px;
+  height: 78px;
+}
+.account-create > .scaffold-form .inputs-users .form-list,
+.registered-users .inputs-users .form-list {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  float: none;
+}
+.account-create > .scaffold-form .inputs-users .new-user,
+.registered-users .inputs-users .new-user {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #ccc;
+  text-align: center;
+  padding: 15px 25px;
+  font-size: 12px;
+}
+.account-create > .scaffold-form .inputs-users .new-user a,
+.registered-users .inputs-users .new-user a {
+  color: #49639f;
+}
+.account-create > .scaffold-form .inputs-users .button,
+.registered-users .inputs-users .button {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  padding: 8px 10px;
+}
+.account-create > .scaffold-form .inputs-users .forgot_pass,
+.registered-users .inputs-users .forgot_pass {
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 799px) {
+  .account-create > .scaffold-form .imagen-users,
+  .registered-users .imagen-users {
+    display: none;
+  }
+  .account-create > .scaffold-form .inputs-users,
+  .registered-users .inputs-users {
+    width: 100%;
+    padding: 25px 0 0 0;
+  }
+  .account-create > .scaffold-form .inputs-users .buttons,
+  .account-create > .scaffold-form .inputs-users .fieldset,
+  .registered-users .inputs-users .buttons,
+  .registered-users .inputs-users .fieldset {
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  .account-create > .scaffold-form .inputs-users .new-user,
+  .registered-users .inputs-users .new-user {
+    position: relative;
+    margin-top: 30px;
+  }
+}
 /* ============================================ *
  * My Account Global Styles
  * ============================================ */
@@ -9714,6 +9883,90 @@ body.newsletter-manage-index .my-account .form-list {
   }
   .contacts-index-index .buttons-set p.required {
     float: right;
+  }
+}
+.contacts-index-index #contactForm {
+  padding-left: 0;
+}
+.contacts-index-index .main-container {
+  padding: 30px 0;
+  max-width: 100%;
+}
+.contacts-index-index .content-contact {
+  position: relative;
+}
+.contacts-index-index .content-contact img {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+.contacts-index-index .content-contact .contacto_valkymia {
+  position: absolute;
+  left: 30%;
+  top: 15%;
+  width: 80%;
+  max-width: 460px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-left: -210px;
+}
+.contacts-index-index .content-contact .contacto_valkymia label {
+  line-height: 1;
+  font-size: 12px;
+  font-family: Lato, sans-serif;
+  color: #fff;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.contacts-index-index .content-contact .contacto_valkymia input[type="text"],
+.contacts-index-index .content-contact .contacto_valkymia input[type="email"],
+.contacts-index-index .content-contact .contacto_valkymia input[type="tel"],
+.contacts-index-index .content-contact .contacto_valkymia textarea {
+  width: 100%;
+  max-width: 100%;
+  background: transparent !important;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 0;
+}
+.contacts-index-index .content-contact .contacto_valkymia textarea {
+  resize: none;
+  height: 150px;
+}
+.contacts-index-index .content-contact .contacto_valkymia button.button {
+  border-radius: 0;
+  border: 1px solid #fff;
+  color: #fff;
+  background: transparent !important;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+@media only screen and (max-width: 1100px) {
+  .contacts-index-index .content-contact .contacto_valkymia {
+    top: 8%;
+  }
+}
+@media only screen and (max-width: 999px) {
+  .contacts-index-index .content-contact .contacto_valkymia {
+    top: 4%;
+  }
+}
+@media only screen and (max-width: 835px) {
+  .contacts-index-index .content-contact .contacto_valkymia {
+    top: 1%;
+    max-width: 400px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .contacts-index-index .content-contact .contacto_valkymia {
+    top: -1px;
+    max-width: 800px;
+    position: relative;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    margin-left: 0;
+    margin: 0;
   }
 }
 
