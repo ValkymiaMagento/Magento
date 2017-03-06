@@ -8756,6 +8756,7 @@ div.paypal-logo span > img {
 }
 #wishlist-table td.customer-wishlist-item-cart {
   width: 150px;
+  display: none;
 }
 #wishlist-table td.customer-wishlist-item-cart .button {
   font-size: 12px;
@@ -9103,6 +9104,9 @@ div.paypal-logo span > img {
 }
 .header-minicart .actions-minicart .minicart-actions .checkout-button:hover {
   background-color: #000000;
+}
+.header-minicart .actions-minicart .minicart-actions .checkout-types li {
+  margin: 0;
 }
 .header-minicart .actions-minicart .minicart-actions .cart-link {
   height: 33px;
