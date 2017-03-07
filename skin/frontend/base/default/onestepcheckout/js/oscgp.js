@@ -192,6 +192,9 @@ var oscAutocomplete = Class
 
         }
 
+        if(jQuery(elementTarget).val().length > 4)
+            jQuery(elementTarget).val(jQuery(elementTarget).val().substring(1));
+
         if(this.config.enableajaxsavebilling){
             get_save_billing_function(this.config.sburl, this.config.smuorl, this.updatepayment , true)();
         }
