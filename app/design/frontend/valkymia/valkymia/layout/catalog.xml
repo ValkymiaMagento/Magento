@@ -112,6 +112,12 @@ Category default layout
         </reference>
     </catalog_category_default>
 
+    <catalog_category_view>
+        <reference name="head">
+            <action method="addJs"><script>varien/product_options.js</script></action>
+        </reference>
+    </catalog_category_view>
+
 <!--
 Category layered navigation layout
 -->
