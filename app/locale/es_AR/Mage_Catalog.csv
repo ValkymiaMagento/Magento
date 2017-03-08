@@ -113,6 +113,7 @@
 "Category move error","Error al mover la categoría"
 "Category must be instance of Mage_Catalog_Model_Category","Categoría debe ser ejemplo de Mage_Catalog_Model_Category"
 "Category saved","Categoría guardada"
+"Category","Categoría"
 "Change","Cambiar"
 "Change or Retrieve attribute store view","Cambiar o Recuperar atributo de la vista de la tienda"
 "Change status","Cambio de estado"

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MMM_Cliente>
+            <active>true</active>
+            <codePool>local</codePool>
+        </MMM_Cliente>
+    </modules>
+</config>

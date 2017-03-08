@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <MMM_Cliente>
+            <version>1.0.0</version>
+        </MMM_Cliente>
+    </modules>
+
+    <global>
+        <blocks>
+            <cliente>
+                <class>MMM_Cliente_Block</class>
+            </cliente>
+            <customer>
+                <rewrite>
+                    <account_navigation>MMM_Cliente_Block_Navigation</account_navigation>
+                </rewrite>
+            </customer>
+        </blocks>
+    </global>
+</config>

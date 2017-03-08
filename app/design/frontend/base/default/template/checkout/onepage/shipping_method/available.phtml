@@ -26,18 +26,40 @@
 ?>
 <?php /** @var $this Mage_Checkout_Block_Onepage_Shipping_Method_Available */ ?>
 <?php $_shippingRateGroups = $this->getShippingRates(); ?>
+
+
+<?php
+//Mage::getSingleton('core/session')->setData('shipping_amount', '');
+//Mage::getSingleton('core/session')->setData('shipping_description', '');
+?>
+
 <?php if (!$_shippingRateGroups): ?>
     <p><?php echo $this->__('Sorry, no quotes are available for this order at this time.') ?></p>
 <?php else: ?>
     <dl class="sp-methods">
     <?php $shippingCodePrice = array(); ?>
+       <?php
+       if(Mage::helper('core')->isModuleEnabled('Ids_Andreani'))
+       {
+           if(Mage::getStoreConfig('carriers/andreanisucursal/active',Mage::app()->getStore()))
+           {
+               if(Mage::getStoreConfig('carriers/andreaniconfig/ws_cache',Mage::app()->getStore()))
+                   echo $this->getLayout()->createBlock('andreani/sucursales')
+                       ->setTemplate('andreani/sucursales.phtml')
+                       ->toHtml();
+           }
+           
+       }
+
+        ?>
     <?php $_sole = count($_shippingRateGroups) == 1; foreach ($_shippingRateGroups as $code => $_rates): ?>
         <dt><?php echo $this->escapeHtml($this->getCarrierName($code)) ?></dt>
         <dd>
             <ul>
+
             <?php $_sole = $_sole && count($_rates) == 1; foreach ($_rates as $_rate): ?>
                 <?php $shippingCodePrice[] = "'".$_rate->getCode()."':".(float)$_rate->getPrice(); ?>
-                <li>
+                <li <?php if($_rate->getCode() =='andreanisucursal_andreanisucursal' && Mage::helper('andreani')->getIsCacheWS()) echo 'id="ws-cache-andreani"'; ?>>
                    <?php if ($_rate->getErrorMessage()): ?>
                     <ul class="messages"><li class="error-msg"><ul><li><?php echo $this->escapeHtml($_rate->getErrorMessage()) ?></li></ul></li></ul>
                    <?php else: ?>
@@ -69,9 +91,18 @@
             </ul>
         </dd>
     <?php endforeach; ?>
+       <div class="no-display" id="box-error"> </div>
+        <span class="please-wait no-display" id="sucursales-wait">
+            <img src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif', array('_secure'=>true)); ?>"  class="v-middle">
+             Por favor espere...
+        </span>
+
     </dl>
 <script type="text/javascript">
 //<![CDATA[
+
+
+
     <?php if (!empty($shippingCodePrice)): ?>
         var shippingCodePrice = {<?php echo implode(',',$shippingCodePrice); ?>};
     <?php endif; ?>
@@ -96,6 +127,9 @@
             }
        });
     });
+
+
+
 //]]>
 </script>
 <?php endif; ?>

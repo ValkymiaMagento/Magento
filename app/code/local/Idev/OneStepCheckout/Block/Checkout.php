@@ -1061,9 +1061,12 @@ class Idev_OneStepCheckout_Block_Checkout extends Mage_Checkout_Block_Onepage_Ab
             'gender' => array(),
             'create_account' => array(),
             'password' => array('has_li' => 1, 'fields' => array('password','confirm_password')),
-            'save_in_address_book' => array('has_li' => 1)
+            'save_in_address_book' => array('has_li' => 1),
+            'dni'=> array()
         );
         $settings = $this->settings['sortordering_fields'];
+        $settings['dni'] = 12;
+
         $tmp = array();
         foreach ($fieldsAvailable as $key => $value){
             if(empty($value['fields'])){
@@ -1109,6 +1112,7 @@ class Idev_OneStepCheckout_Block_Checkout extends Mage_Checkout_Block_Onepage_Ab
             'company-fax' => array('fields' => array('company','fax')),
             'taxvat' => array(),
             'save_in_address_book' => array('has_li' => 1),
+            'dni'=> array('has_li' => 1)
         );
         $settings = $this->settings['sortordering_fields'];
         $tmp = array();
