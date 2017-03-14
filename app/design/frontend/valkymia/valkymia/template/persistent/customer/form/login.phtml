@@ -56,21 +56,22 @@
                         </div>
                         <ul class="form-list">
                             <li>
-                                <label for="email" class="required"><em>*</em><?php echo $this->__('Email Address') ?></label>
+                                <label for="email"><?php echo $this->__('Email Address') ?></label>
                                 <div class="input-box">
                                     <input type="email" autocapitalize="off" autocorrect="off" spellcheck="false" name="login[username]" value="<?php echo $this->escapeHtml($this->getUsername()) ?>" id="email" class="input-text required-entry validate-email" title="<?php echo $this->quoteEscape($this->__('Email Address')) ?>" />
                                 </div>
                             </li>
                             <li>
-                                <label for="pass" class="required"><em>*</em><?php echo $this->__('Password') ?></label>
+                                <label for="pass" >
+                                    <?php echo $this->__('Password') ?>
+                                    <a href="<?php echo $this->getForgotPasswordUrl() ?>" class="f-left forgot_pass"><?php echo $this->__('Forgot Your Password?') ?></a>
+                                </label>
                                 <div class="input-box">
                                     <input type="password" name="login[password]" class="input-text required-entry validate-password" id="pass" title="<?php echo $this->quoteEscape($this->__('Password')) ?>" />
                                 </div>
                             </li>
                             <?php echo $this->getChildHtml('form.additional.info'); ?>
-                            <li>
-                                <a href="<?php echo $this->getForgotPasswordUrl() ?>" class="f-left forgot_pass"><?php echo $this->__('Forgot Your Password?') ?></a>
-                            </li>
+
                             <?php echo $this->getChildHtml('persistent.remember.me'); ?>
                         </ul>
                         <?php echo $this->getChildHtml('persistent.remember.me.tooltip'); ?>
@@ -95,3 +96,9 @@
     </script>
 </div>
 <div class="back-overlay"></div>
+
+<script>
+    jQuery(document).ready(function(){
+        jQuery('.inchoo-socialconnect-login').insertAfter('.inputs-users .buttons');
+    });
+</script>
