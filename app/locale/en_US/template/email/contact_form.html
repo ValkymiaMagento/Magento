@@ -1,12 +1,39 @@
-<!--@subject Contact Form@-->
+<!--@subject Formulario de contacto@-->
 <!--@vars
 {"var data.name":"Sender Name",
 "var data.email":"Sender Email",
 "var data.telephone":"Sender Telephone",
 "var data.comment":"Comment"}
 @-->
-Name: {{var data.name}}
-Email: {{var data.email}}
-Telephone: {{var data.telephone}}
+{{template config_path="design/email/header"}}
+{{inlinecss file="email-inline.css"}}
 
-Comment: {{var data.comment}}
+<table cellpadding="0" cellspacing="0" border="0" class="mail-contacto">
+    <tr>
+        <td>
+            <p class="intro-contacto">Han hecho una solicitud a través de la página de contacto en <span class="nombre-site">{{var store.getFrontendName()}}</span> con los siguientes datos:</p>
+
+            <p class="info-contacto">
+                <span>Nombre:</span><br/>
+                {{var data.name}}
+            </p>
+
+            <p class="info-contacto">
+                <span>Correo electrónico:</span><br/>
+                {{var data.email}}
+            </p>
+
+            <p class="info-contacto">
+                <span>Teléfono:</span><br/>
+                {{var data.telephone}}
+            </p>
+
+            <p class="info-contacto">
+                <span>Comentario:</span><br/>
+                {{var data.comment}}
+            </p>
+        </td>
+    </tr>
+</table>
+
+{{template config_path="design/email/footer"}}

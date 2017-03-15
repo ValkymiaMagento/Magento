@@ -1,4 +1,4 @@
-<!--@subject {{var store.getFrontendName()}}: New Order # {{var order.increment_id}} @-->
+<!--@subject {{var store.getFrontendName()}}: Nuevo pedido #{{var order.increment_id}} @-->
 <!--@vars
 {"store url=\"\"":"Store Url",
 "var logo_url":"Email Logo Image Url",
@@ -27,21 +27,21 @@
             <table cellpadding="0" cellspacing="0" border="0">
                 <tr>
                     <td class="email-heading">
-                        <h1>Thank you for your order from {{var store.getFrontendName()}}.</h1>
-                        <p>Once your package ships we will send an email with a link to track your order. Your order summary is below. Thank you again for your business.</p>
+                        <h1>Gracias por tu pedido en {{var store.getFrontendName()}}.</h1>
+                        <p>Una vez que el paquete se envíe te enviaremos un email con un link para seguir tu pedido. El resumen de tu pedido está debajo. Gracias nuevamente por tu atención.</p>
                     </td>
                     <td class="store-info">
-                        <h4>Order Questions?</h4>
+                        <h4>¿Preguntas sobre el pedido?</h4>
                         <p>
                             {{depend store_phone}}
-                            <b>Call Us:</b>
+                            <b>Llamanos:</b>
                             <a href="tel:{{var phone}}">{{var store_phone}}</a><br>
                             {{/depend}}
                             {{depend store_hours}}
                             <span class="no-link">{{var store_hours}}</span><br>
                             {{/depend}}
                             {{depend store_email}}
-                            <b>Email:</b> <a href="mailto:{{var store_email}}">{{var store_email}}</a>
+                            <b>Correo electrónico:</b> <a href="mailto:{{var store_email}}">{{var store_email}}</a>
                             {{/depend}}
                         </p>
                     </td>
@@ -51,8 +51,8 @@
     </tr>
     <tr>
         <td class="order-details">
-            <h3>Your order <span class="no-link">#{{var order.increment_id}}</span></h3>
-            <p>Placed on {{var order.getCreatedAtFormated('long')}}</p>
+            <h3>Tu pedido <span class="no-link">#{{var order.increment_id}}</span></h3>
+            <p>del {{var order.getCreatedAtFormated('long')}}</p>
         </td>
     </tr>
     <tr class="order-information">
@@ -65,15 +65,15 @@
             </table>
             {{/if}}
             {{layout handle="sales_email_order_items" order=$order}}
-            <table cellpadding="0" cellspacing="0" border="0">
+            <table cellpadding="0" cellspacing="0" border="0" class="info-compra">
                 <tr>
                     <td class="address-details">
-                        <h6>Bill to:</h6>
+                        <h6>Facturar a:</h6>
                         <p><span class="no-link">{{var order.getBillingAddress().format('html')}}</span></p>
                     </td>
                     {{depend order.getIsNotVirtual()}}
                     <td class="address-details">
-                        <h6>Ship to:</h6>
+                        <h6>Enviar a:</h6>
                         <p><span class="no-link">{{var order.getShippingAddress().format('html')}}</span></p>
                     </td>
                     {{/depend}}
@@ -81,12 +81,12 @@
                 <tr>
                     {{depend order.getIsNotVirtual()}}
                     <td class="method-info">
-                        <h6>Shipping method:</h6>
+                        <h6>Método de envío:</h6>
                         <p>{{var order.shipping_description}}</p>
                     </td>
                     {{/depend}}
                     <td class="method-info">
-                        <h6>Payment method:</h6>
+                        <h6>Método de pago:</h6>
                         {{var payment_html}}
                     </td>
                 </tr>

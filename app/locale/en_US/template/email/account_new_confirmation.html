@@ -1,4 +1,4 @@
-<!--@subject Account confirmation for {{var customer.name}} @-->
+﻿<!--@subject Confirmación de cuenta para {{var customer.name}} @-->
 <!--@vars
 {"store url=\"\"":"Store Url",
 "var logo_url":"Email Logo Image Url",
@@ -23,24 +23,24 @@
                 <tr>
                     <td class="action-content">
                         <h1>{{htmlescape var=$customer.name}},</h1>
-                        <p>Your email {{var customer.email}} must be confirmed before using it to log in to our store.</p>
+                        <p>Tu correo electrónico {{var customer.email}} debe ser confirmado antes de ser utilizado para ingresar en nuestra tienda.</p>
                         <p class="highlighted-text">
-                            Use the following values when prompted to log in:<br/>
-                            <strong>Email:</strong> {{var customer.email}}<br/>
-                            <strong>Password:</strong> {{htmlescape var=$customer.password}}
+                            Utilizá estos datos para iniciar sesión:<br/>
+                            <strong>Correo electrónico:</strong> {{var customer.email}}<br/>
+                            <strong>Contraseña:</strong> {{htmlescape var=$customer.password}}
                         </p>
-                        <p>Click here to confirm your email and instantly log in (the link is valid only once):</p>
+                        <p>Hacé click en acá para confirmar tu correo electrónico e iniciar sesión instantáneamente (el link es válido una sola vez):</p>
                         <table cellspacing="0" cellpadding="0" class="action-button" >
                             <tr>
                                 <td>
-                                    <a href="{{store url="customer/account/confirm/" _query_id=$customer.id _query_key=$customer.confirmation _query_back_url=$back_url}}"><span>Confirm Account</span></a>
+                                    <a href="{{store url="customer/account/confirm/" _query_id=$customer.id _query_key=$customer.confirmation _query_back_url=$back_url}}"><span>Confirmar Cuenta</span></a>
                                 </td>
                             </tr>
                         </table>
                         <p>
-                            If you have any questions, please feel free to contact us at
+                            Si tenés alguna consulta, no dudes en contactarnos a
                             <a href="mailto:{{var store_email}}">{{var store_email}}</a>
-                            {{depend store_phone}} or by phone at <a href="tel:{{var phone}}">{{var store_phone}}</a>{{/depend}}.
+                            {{depend store_phone}} o por teléfono al <a href="tel:{{var phone}}">{{var store_phone}}</a>{{/depend}}.
                         </p>
                     </td>
                 </tr>
