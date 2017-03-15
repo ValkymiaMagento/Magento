@@ -35,16 +35,21 @@ $mq-fixed-value: 1024;
  * General Styles
  * ============================================ */
 body, table.body, th, h1, h2, h3, h4, h5, h6, td, p, strong {
-  font-family: Verdana, Arial;
+  font-family: Arial, Verdana;
   font-weight: normal;
+}
+
+p {
+  font-size: 13px;
+  color: #000;
 }
 
 body {
   margin: 0;
   padding: 0;
   text-align: left;
-  color: #333333;
-  background-color: #EBEBEB;
+  color: #fff;
+  background-color: #fff;
 }
 
 body {
@@ -62,7 +67,7 @@ img {
 }
 
 body {
-  background: #EBEBEB;
+  background: #fff;
   font-size: 12px;
   margin: 0;
   padding: 0;
@@ -78,7 +83,7 @@ table td {
 }
 
 a {
-  color: #3696C2;
+  color: #000000;
 }
 
 .cell-content.product-info,
@@ -91,7 +96,7 @@ a {
 
 html,
 #background-table {
-  background-color: #EBEBEB;
+  background-color: #fff;
 }
 
 #background-table {
@@ -113,9 +118,9 @@ html,
  * Header Styles
  * ============================================ */
 .top-content {
-  border: 1px solid #EBEBEB;
+  border: 1px solid #f1f1f1;
   background: #FFF;
-  padding: 5px;
+  padding: 15px;
 }
 
 table.logo-container {
@@ -123,7 +128,7 @@ table.logo-container {
 }
 
 td.logo {
-  padding: 15px 0px 10px 5px;
+  padding: 15px 0px 10px;
 }
 
 td.logo a {
@@ -138,34 +143,38 @@ td.logo img {
 
 td.email-heading {
   padding: 0 1%;
-  background: #E1F0F8;
-  border-right: 1px dashed #C3CED4;
+  background: #fff;
+  border-right: 1px solid #e1e1e1;
   text-align: center;
   width: 58%;
+  vertical-align: middle;
 }
 
 td.email-heading h1 {
   font-weight: 700;
   font-size: 16px;
-  margin: 1em 0;
-  line-height: 20px;
+  margin: 0 0 1em;
+  line-height: 1;
   text-transform: uppercase;
 }
 
 td.email-heading p {
-  line-height: 20px;
+  line-height: 1;
   margin: 1em 0;
 }
 
 td.store-info {
   padding: 2%;
-  background: #E1F0F8;
+  background: #fff;
   width: 40%;
+  vertical-align: middle;
+  text-align: center;
 }
 
 td.store-info h4 {
   margin-bottom: 5px;
   font-size: 11px;
+  color: #000000;
 }
 
 td.store-info p {
@@ -176,7 +185,29 @@ td.store-info p {
 
 td.store-info a {
   text-decoration: underline;
-  color: #3696C2;
+  color: #000000;
+}
+
+/* ============================================ *
+ * Footer - Styles
+ * ============================================ */
+.container-table-footer {
+  width: 600px;
+  margin: 15px auto 0;
+}
+.container-table-footer td.logo-empresa {
+  text-align: left;
+  vertical-align: middle;
+  height: 34px;
+  width: 150px;
+}
+.container-table-footer td.copy-mail {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 10px;
+  color: #696969;
+  height: 34px;
+  width: 300px;
 }
 
 /* ============================================ *
@@ -185,18 +216,20 @@ td.store-info a {
 td.order-details {
   padding: 5px 15px;
   text-align: center;
+  border-top: 1px solid #e1e1e1;
 }
-
 td.order-details h3 {
-  font-size: 17px;
-  margin-bottom: 10px;
-  margin-top: 15px;
-  font-weight: normal;
+  font-size: 16px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  line-height: 1;
+  font-weight: bold;
+  color: #000000;
 }
-
 td.order-details p {
   font-size: 11px;
-  margin: 1em 0 15px;
+  margin: 5px 0;
+  line-height: 1;
 }
 
 .items {
@@ -211,6 +244,7 @@ td.order-details p {
   text-transform: uppercase;
   text-align: left;
   font-size: 11px;
+  color: #000000;
 }
 
 .cell-name.align-center {
@@ -230,14 +264,36 @@ td.order-details p {
 
 .cell-content {
   padding: 10px 15px;
-  border-top: 1px solid #EBEBEB;
-  font-family: Verdana, Arial;
+  border-bottom: 1px solid #F1F1F1;
+  font-family: Arial, Verdana;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #000000;
+}
+
+.cell-content.product-info {
+  padding: 10px 15px 10px 5px;
+}
+
+.cell-content.imagen {
+  width: 75px;
+  padding: 5px;
+}
+
+.cell-content.align-center {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.cell-content.align-right {
+  text-align: right;
+  vertical-align: middle;
 }
 
 .product-info a.product-name {
   font-weight: 700;
   text-transform: uppercase;
-  color: #3696C2;
+  color: #000000;
   text-decoration: none;
   vertical-align: middle;
   float: left;
@@ -247,13 +303,46 @@ td.order-details p {
 
 .table-totals {
   width: 100%;
-  background: #E1F0F8;
+  background: #fff;
 }
 
 .padding-totals {
-  padding: 20px 15px;
+  padding: 20px 6px;
   text-align: right;
   line-height: 20px;
+  width: 100%;
+  border-bottom: 1px solid #F1F1F1;
+}
+
+tr.subtotal td {
+  font-size: 12px;
+  padding: 3px 0 3px 9px;
+  color: #000000;
+}
+
+tr.shipping td {
+  font-size: 12px;
+  padding: 3px 0 3px 9px;
+  color: #000000;
+}
+
+tr.grand_total td {
+  font-size: 14px;
+}
+tr.grand_total td strong {
+  color: #000000;
+  padding: 3px 0 3px 9px;
+}
+tr.grand_total td strong span.price {
+  color: #000000;
+}
+
+td.label-totals {
+  width: 80%;
+}
+
+td.precio-totals {
+  width: 20%;
 }
 
 .padding-totals .last {
@@ -270,7 +359,7 @@ td.order-details p {
 }
 
 .grand-total {
-  border-top: 1px solid #C3CED4;
+  border-top: 1px solid #e1e1e1;
   padding-top: 5px;
   font-weight: 700;
   font-size: 15px;
@@ -301,6 +390,7 @@ td.order-details p {
   margin-bottom: 0px;
   margin-top: 5px;
   text-transform: uppercase;
+  color: #000000;
 }
 
 .address-details p {
@@ -347,11 +437,12 @@ td.order-details p {
 }
 
 .action-content h1 {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   margin-top: 5px;
-  line-height: 28px;
+  line-height: 25px;
+  color: #000000;
 }
 
 .line-separator {
@@ -363,13 +454,40 @@ td.order-details p {
 }
 
 /* ============================================ *
+ * Email Usuario - Styles
+ * ============================================ */
+.email-usuario a,
+.email-usuario {
+  color: #000000;
+}
+
+/* ============================================ *
+ * Tabla de informacion de compra y envio - Styles
+ * ============================================ */
+.info-compra {
+  width: 100%;
+}
+.info-compra td {
+  width: 50%;
+}
+
+/* ============================================ *
  * Comments and Messages - Styles
  * ============================================ */
+.full-width {
+  width: 100%;
+}
+
 .message-container {
   margin: 15px 0;
   width: 100%;
-  background-color: #FFFDD9;
-  border: 1px solid #FFF74C;
+  background-color: #fff5ef;
+  border: 1px solid #ffdec9;
+  color: #000000;
+}
+.message-container .comentario {
+  font-size: 13px;
+  font-weight: bold;
 }
 
 .message-container,
@@ -384,9 +502,22 @@ td.order-details p {
 }
 
 .highlighted-text {
-  border: 1px solid #C3CED4;
+  border: 1px solid #e1e1e1;
   padding: 13px 18px;
   background: #F1F1F1;
+}
+.highlighted-text strong {
+  font-weight: bold;
+}
+
+.registro-usuario {
+  color: #000000;
+}
+.registro-usuario li {
+  font-size: 13px;
+}
+.registro-usuario li span {
+  color: #000;
 }
 
 /* ============================================ *
@@ -398,7 +529,7 @@ td.order-details p {
 }
 
 .bundle-item-parent {
-  border-top: 1px solid #EBEBEB;
+  border-top: 1px solid #fff;
   padding: 10px 15px;
 }
 
@@ -425,12 +556,11 @@ td.order-details p {
   margin: 0 auto;
   text-align: center;
 }
-
 .action-button td {
-  background-color: #3696C2;
+  background-color: #000000;
   color: #FFF;
   width: 100%;
-  height: 40px;
+  height: 30px;
   display: block;
   border: 0 none;
   text-align: center;
@@ -439,16 +569,14 @@ td.order-details p {
   white-space: nowrap;
   margin: 0 auto;
 }
-
 .action-button a {
   width: 100%;
   height: 100%;
-  line-height: 40px;
+  line-height: 15px;
   font-size: 15px;
   display: inline-block;
   text-decoration: none;
 }
-
 .action-button a span {
   color: #FFF;
 }
@@ -456,6 +584,15 @@ td.order-details p {
 /* ============================================ *
  * Newsletter - Default Template Styles
  * ============================================ */
+td.news {
+  height: 200px;
+}
+td.news p {
+  font-weight: bold;
+  font-size: 13px;
+  color: #000000;
+}
+
 hr {
   background-color: #D9D9D9;
   border: medium none;
@@ -466,13 +603,14 @@ hr {
 }
 
 td.email-heading h1 {
-  margin-top: 25px;
+  color: #000000;
 }
 
 td.store-info h4 {
   font-size: 12px;
   margin-top: 13px;
   font-weight: bold;
+  color: #000000;
 }
 
 table, table td {
@@ -554,7 +692,7 @@ table.social-button td {
 }
 
 table.button td {
-  background: #3696C2;
+  background: #000000;
 }
 
 table.social-button td {
@@ -589,7 +727,7 @@ table.social-button td a {
 }
 
 .panel a {
-  color: #3696C2;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -662,20 +800,18 @@ h2.products {
 
 .product-name {
   margin: 0 0 5px 0;
-  color: #454545;
   font-style: normal;
   text-rendering: optimizeLegibility;
   text-transform: uppercase;
   line-height: 1.4;
-  font-size: 14px;
-}
-
-p.product-name {
-  font-weight: bold;
+  font-size: 12px;
+  font-weight: normal;
+  color: #000000;
 }
 
 p.sku {
   margin: 0 0 5px;
+  font-size: 11px;
 }
 
 /* ============================================ *
@@ -684,7 +820,7 @@ p.sku {
  * ============================================ */
 .price-box {
   margin: 7px 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Arial", Verdana, sans-serif;
 }
 
 .price-box p {
@@ -696,13 +832,13 @@ p.sku {
 }
 
 .price-box .price {
-  color: #000;
+  color: #000000;
   font-size: 16px;
 }
 
 .price-box .price,
 .price {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Arial", Verdana, sans-serif;
 }
 
 .price-box .price-label {
@@ -713,12 +849,26 @@ p.sku {
 
 .price-box .minimal-price-link {
   padding-left: 1em;
-  color: #000;
+  color: #000000;
   display: block;
   /* We want this to show on its own line, otherwise the layout looks funky */
 }
 .price-box .minimal-price-link .label {
   color: #A0A0A0;
+}
+
+span.price {
+  font-size: 12px;
+}
+
+strong {
+  font-weight: bold;
+  font-size: 14px;
+  color: #000000;
+}
+strong span.price {
+  font-size: 14px;
+  color: #000000;
 }
 
 /* -------------------------------------------- *
@@ -743,7 +893,7 @@ p.sku {
 }
 
 .price-box .special-price {
-  color: #000;
+  color: #000000;
   padding-left: 1em;
 }
 .price-box .special-price .price-label {

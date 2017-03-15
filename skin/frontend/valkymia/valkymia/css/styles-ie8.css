@@ -3322,6 +3322,7 @@ a.skip-link {
   color: #ffffff;
   background: #000000;
 }
+#header-account li#mi-cuenta a,
 #header-account li#registrar a {
   background: transparent;
   padding: 10px 0 0;
@@ -3330,6 +3331,16 @@ a.skip-link {
   text-align: right;
   font-weight: 300;
   font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+}
+#header-account li#mi-cuenta a {
+  background: transparent;
+  padding: 10px 0 0;
+  line-height: 1;
+  color: #22313f;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
   font-family: "Open Sans", sans-serif;
 }
 
