@@ -3,33 +3,15 @@
 // ==============================================
 
 
-$j(document).ready(function () {
+jQuery(document).ready(function () {
 
-	var $ancho = $j('.main-container');
+	var $ancho = jQuery('.main-container');
 
-	$j('#menu_mobile').mmenu();
-    
-    if(($ancho.innerWidth()+13)>=999)
-    {
-        
-    }
-    else
-    {
-        $j('#search_mini_form').prependTo('.mm-navbar');
-    }
+    jQuery('#menu_mobile').mmenu();
 
-    // RESIZE PANTALLA
-	$j(window).resize(function () {
-	    if(($ancho.innerWidth()+13)>=999)
-	    {
-            $j('#search_mini_form').appendTo('#header-search');
-	        
-	    }
-	    else
-	    {
-	        $j('#search_mini_form').prependTo('.mm-navbar');
-	    }
-	});
+    jQuery('#header-search-mobile').prependTo('.mm-navbar');
+
+
 
 
 	// MOVER CARRITO HOME

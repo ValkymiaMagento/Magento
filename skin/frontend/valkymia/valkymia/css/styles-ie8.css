@@ -2985,11 +2985,18 @@ a.skip-link {
 /* ============================================ *
  * Nav Primary
  * ============================================ */
-.nav-primary {
-  display: block;
-  padding: 0;
+nav#nav {
   border-top: 1px solid #eeeeee;
+}
+
+.nav-primary {
+  padding: 0;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 /* ============================================ *
@@ -3042,8 +3049,9 @@ a.skip-link {
   /* Level 1+ */
 }
 .nav-primary a.level0 {
-  padding: 0 12px;
-  line-height: 35px;
+  padding: 12px 5px;
+  line-height: 1;
+  font-size: 13px;
 }
 .nav-primary li.level0,
 .nav-primary a.level0 {
