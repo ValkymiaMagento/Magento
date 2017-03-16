@@ -2,12 +2,31 @@
 <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('slider_principal')->toHtml(); ?>
 
 <div class="info-slider">
-	<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('info_slider_home_valkymia')->toHtml(); ?>
+    <!-- BLOQUES DE LA HOME -->
+    <?php  $infosliderHome = Mage::getModel('cms/block')->load('info_slider_home_valkymia')->getIsActive() ?>
+    <?php if (count($infosliderHome) > 0): ?>
+        <div class="content-home">
+                <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('info_slider_home_valkymia')->toHtml(); ?>
+        </div>
+    <?php endif; ?>
 </div>
 
 <div class="content-home">
-	<!-- BLOQUE DE LA HOME -->
-	<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('bloques_home_valkymia')->toHtml(); ?>
+	<!-- BLOQUES DE LA HOME -->
+	<?php  $bloquesHome = Mage::getModel('cms/block')->load('bloques_home_valkymia')->getIsActive() ?>
+    <?php if (count($bloquesHome) > 0): ?>
+        <div class="bloques-home">
+            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('bloques_home_valkymia')->toHtml(); ?>
+        </div>
+    <?php endif; ?>
+
+    <!-- INFO ENVÍO DE LA HOME -->
+    <?php  $enviosHome = Mage::getModel('cms/block')->load('info_envio_home_valkymia')->getIsActive() ?>
+    <?php if (count($enviosHome) > 0): ?>
+        <div class="bloques-home">
+            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('info_envio_home_valkymia')->toHtml(); ?>
+        </div>
+    <?php endif; ?>
 
 	<!-- DESTACADOS HOME -->
 	<?php  $destacadoHome = Mage::getModel('cms/block')->load('destacados_home_valkymia')->getIsActive() ?>
