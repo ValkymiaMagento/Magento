@@ -389,3 +389,7 @@ body .promos > li {
   font: italic 18px/28px Georgia, "Times New Roman", Times, serif;
   color: #656565;
 }
+
+.catalog-category-view .main-container p.note-msg {
+  min-height: 300px;
+}
