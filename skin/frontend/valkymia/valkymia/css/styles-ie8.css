@@ -979,7 +979,7 @@ a.button:hover {
  * Icons
  */
 .icon-sprite, .btn-remove2, .ratings .rating-box, .ratings .rating-box .rating, .sorter > .sort-by .sort-by-switcher, .sorter > .view-mode .grid,
-.sorter > .view-mode .list, .skip-nav .icon, .menu_mobile .abrir_menu, .skip-search .icon, #search_mini_form .search-button:before, .skip-account .icon, .skip-cart .icon, .social-media-valkymia .social-icons .icon span, .product-view .add-to-links a.link-wishlist:before, .product-view .sharing-links a, .review-summary-table .rating-box .rating-number:after, .ratings-table .rating-box, .ratings-table .rating-box .rating, .header-minicart .block-subtitle .cart-link, .header-minicart .product-details .remove {
+.sorter > .view-mode .list, .skip-nav .icon, .menu_mobile .abrir_menu, .skip-search .icon, #search_mini_form .search-button:before, .skip-account .icon, .skip-cart .icon, .footer > .block.block-subscribe .block-title.news span:before, .social-media-valkymia .social-icons .icon span, .product-view .add-to-links a.link-wishlist:before, .product-view .sharing-links a, .review-summary-table .rating-box .rating-number:after, .ratings-table .rating-box, .ratings-table .rating-box .rating, .header-minicart .block-subtitle .cart-link, .header-minicart .product-details .remove {
   background-image: url(../images/icon_sprite.png);
   background-repeat: no-repeat;
   text-indent: -9999px;
@@ -987,7 +987,7 @@ a.button:hover {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 4 / 2), (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .icon-sprite, .btn-remove2, .ratings .rating-box, .ratings .rating-box .rating, .sorter > .sort-by .sort-by-switcher, .sorter > .view-mode .grid,
-  .sorter > .view-mode .list, .skip-nav .icon, .menu_mobile .abrir_menu, .skip-search .icon, #search_mini_form .search-button:before, .skip-account .icon, .skip-cart .icon, .social-media-valkymia .social-icons .icon span, .product-view .add-to-links a.link-wishlist:before, .product-view .sharing-links a, .review-summary-table .rating-box .rating-number:after, .ratings-table .rating-box, .ratings-table .rating-box .rating, .header-minicart .block-subtitle .cart-link, .header-minicart .product-details .remove {
+  .sorter > .view-mode .list, .skip-nav .icon, .menu_mobile .abrir_menu, .skip-search .icon, #search_mini_form .search-button:before, .skip-account .icon, .skip-cart .icon, .footer > .block.block-subscribe .block-title.news span:before, .social-media-valkymia .social-icons .icon span, .product-view .add-to-links a.link-wishlist:before, .product-view .sharing-links a, .review-summary-table .rating-box .rating-number:after, .ratings-table .rating-box, .ratings-table .rating-box .rating, .header-minicart .block-subtitle .cart-link, .header-minicart .product-details .remove {
     background-image: url(../images/icon_sprite@2x.png);
     background-size: 100px 1000px;
   }
@@ -3571,6 +3571,19 @@ nav#nav {
   width: 30%;
   padding-left: 0;
 }
+.footer > .block.block-subscribe .block-title.news {
+  display: block;
+}
+.footer > .block.block-subscribe .block-title.news span:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 16px;
+  margin-right: 8px;
+  background-position: 0px -687px;
+  margin-top: -3px;
+}
 .footer > .block.block-subscribe > span {
   font-size: 10px;
   letter-spacing: 0.06em;
@@ -4703,6 +4716,13 @@ body.home-valkymia .main-container .content-home {
   font-weight: bold;
   margin-bottom: 2px;
   font-size: 14px;
+}
+.info-slider a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.info-slider a:hover {
+  color: #b3b3b3;
 }
 
 /* Info Slider */
@@ -10078,6 +10098,110 @@ body[class*="checkout-multishipping-"] .checkout-progress span {
   border: 0;
   padding-right: 0;
   padding-left: 0;
+}
+
+/* ============================================ *
+ * Locales Valkymia
+ * ============================================ */
+.cms-locales-valkymia .page-title {
+  text-align: center;
+  margin: 0;
+  padding: 20px 0 40px;
+}
+.cms-locales-valkymia .page-title h1 {
+  font-size: 34px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: #000000;
+}
+
+.locales-valkymia {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin-left: -25px;
+  margin-right: -25px;
+}
+.locales-valkymia .local {
+  width: 33.3333%;
+  padding: 0 25px;
+  margin-bottom: 50px;
+  border-right: 1px solid #eeeeee;
+}
+.locales-valkymia .local .img-local img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+.locales-valkymia .local .info-local {
+  padding: 20px;
+}
+.locales-valkymia .local .info-local a.google-maps {
+  display: block;
+  text-align: center;
+  padding: 9px 5px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid #eeeeee;
+  margin: 20px 0;
+  color: #000000;
+}
+.locales-valkymia .local .info-local a.google-maps span:before {
+  content: ' ';
+  background: url("../images/locales_valkymia.png") no-repeat left top;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
+  width: 15px;
+  height: 19px;
+  margin-top: -2px;
+}
+.locales-valkymia .local .info-local a.google-maps:hover {
+  background: #f2f2f2;
+  text-decoration: none;
+}
+.locales-valkymia .local .info-local .transporte {
+  margin-bottom: 20px;
+}
+.locales-valkymia .local .info-local .transporte div {
+  display: flex;
+  padding-bottom: 12px;
+}
+.locales-valkymia .local .info-local .transporte div span.icon {
+  width: 28px;
+  min-width: 28px;
+}
+.locales-valkymia .local .info-local .transporte div p {
+  padding-left: 4px;
+  font-size: 13px;
+}
+.locales-valkymia .local .info-local .transporte div:last-child {
+  padding-bottom: 0;
+}
+.locales-valkymia .local p {
+  font-style: normal;
+  font-size: 14px;
+  color: #000000;
+  line-height: 1.2;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+.locales-valkymia .local p + p {
+  margin-top: 3px;
+}
+.locales-valkymia .local h2 {
+  font-size: 22px;
+  margin-bottom: 6px;
+  color: #000000;
+}
+.locales-valkymia .local h3 {
+  color: #000000;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.locales-valkymia .local:nth-child(3n+3) {
+  border-right: 0;
 }
 
 /* ============================================ *
