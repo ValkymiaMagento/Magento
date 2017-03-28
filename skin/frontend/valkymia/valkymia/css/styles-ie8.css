@@ -979,7 +979,7 @@ a.button:hover {
  * Icons
  */
 .icon-sprite, .btn-remove2, .ratings .rating-box, .ratings .rating-box .rating, .sorter > .sort-by .sort-by-switcher, .sorter > .view-mode .grid,
-.sorter > .view-mode .list, .skip-nav .icon, .menu_mobile .abrir_menu, .skip-search .icon, #search_mini_form .search-button:before, .skip-account .icon, .skip-cart .icon, .footer > .block.block-subscribe .block-title.news span:before, .social-media-valkymia .social-icons .icon span, .product-view .add-to-links a.link-wishlist:before, .product-view .sharing-links a, .review-summary-table .rating-box .rating-number:after, .ratings-table .rating-box, .ratings-table .rating-box .rating, .header-minicart .block-subtitle .cart-link, .header-minicart .product-details .remove {
+.sorter > .view-mode .list, .skip-nav .icon, .menu_mobile .abrir_menu, .skip-search .icon, #search_mini_form .search-button:before, .skip-account .icon, .skip-cart .icon, .footer > .block.block-subscribe .block-title.news span:before, .social-media-valkymia .social-icons .icon span, .product-view .add-to-links a.link-wishlist:before, .product-view .sharing-links a, .review-summary-table .rating-box .rating-number:after, .ratings-table .rating-box, .ratings-table .rating-box .rating, .header-minicart .block-subtitle .cart-link, .header-minicart .product-details .remove, .locales-valkymia .local .info-local .contacts p span:before {
   background-image: url(../images/icon_sprite.png);
   background-repeat: no-repeat;
   text-indent: -9999px;
@@ -987,7 +987,7 @@ a.button:hover {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 4 / 2), (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .icon-sprite, .btn-remove2, .ratings .rating-box, .ratings .rating-box .rating, .sorter > .sort-by .sort-by-switcher, .sorter > .view-mode .grid,
-  .sorter > .view-mode .list, .skip-nav .icon, .menu_mobile .abrir_menu, .skip-search .icon, #search_mini_form .search-button:before, .skip-account .icon, .skip-cart .icon, .footer > .block.block-subscribe .block-title.news span:before, .social-media-valkymia .social-icons .icon span, .product-view .add-to-links a.link-wishlist:before, .product-view .sharing-links a, .review-summary-table .rating-box .rating-number:after, .ratings-table .rating-box, .ratings-table .rating-box .rating, .header-minicart .block-subtitle .cart-link, .header-minicart .product-details .remove {
+  .sorter > .view-mode .list, .skip-nav .icon, .menu_mobile .abrir_menu, .skip-search .icon, #search_mini_form .search-button:before, .skip-account .icon, .skip-cart .icon, .footer > .block.block-subscribe .block-title.news span:before, .social-media-valkymia .social-icons .icon span, .product-view .add-to-links a.link-wishlist:before, .product-view .sharing-links a, .review-summary-table .rating-box .rating-number:after, .ratings-table .rating-box, .ratings-table .rating-box .rating, .header-minicart .block-subtitle .cart-link, .header-minicart .product-details .remove, .locales-valkymia .local .info-local .contacts p span:before {
     background-image: url(../images/icon_sprite@2x.png);
     background-size: 100px 1000px;
   }
@@ -10123,7 +10123,7 @@ body[class*="checkout-multishipping-"] .checkout-progress span {
   margin-right: -25px;
 }
 .locales-valkymia .local {
-  width: 33.3333%;
+  width: 50%;
   padding: 0 25px;
   margin-bottom: 50px;
   border-right: 1px solid #eeeeee;
@@ -10179,6 +10179,31 @@ body[class*="checkout-multishipping-"] .checkout-progress span {
 .locales-valkymia .local .info-local .transporte div:last-child {
   padding-bottom: 0;
 }
+.locales-valkymia .local .info-local .horas {
+  margin-bottom: 20px;
+}
+.locales-valkymia .local .info-local .contacts p {
+  margin-bottom: 5px;
+  line-height: 20px;
+}
+.locales-valkymia .local .info-local .contacts p span:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  margin-top: -3px;
+}
+.locales-valkymia .local .info-local .contacts p.facebook span:before {
+  background-position: 0 -726px;
+}
+.locales-valkymia .local .info-local .contacts p.whatsapp span:before {
+  background-position: -49px -726px;
+}
+.locales-valkymia .local .info-local .contacts p.email span:before {
+  background-position: -26px -726px;
+}
 .locales-valkymia .local p {
   font-style: normal;
   font-size: 14px;
@@ -10200,7 +10225,7 @@ body[class*="checkout-multishipping-"] .checkout-progress span {
   font-size: 16px;
   margin-bottom: 10px;
 }
-.locales-valkymia .local:nth-child(3n+3) {
+.locales-valkymia .local:nth-child(2n+2) {
   border-right: 0;
 }
 
