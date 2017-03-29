@@ -87,9 +87,9 @@ Load this update on every page when customer is logged out
             <action method="addLink" translate="label title" module="customer"><label>Log In</label><url helper="customer/getLoginUrl"/><title>Log In</title><prepare/><urlParams/><position>100</position></action>
             
             <action method="addLink" translate="label title before_text" module="customer">
-                <label>Sos nuevo? Arranca acá</label>
+                <label>Sos nuevo? Registrate</label>
                 <url helper="customer/getRegisterUrl" />
-                <title>Sos nuevo? Arranca acá</title>
+                <title>Sos nuevo? Registrate</title>
                 <prepare/>
                 <urlParams/>
                 <position>101</position>

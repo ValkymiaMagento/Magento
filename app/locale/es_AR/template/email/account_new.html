@@ -1,0 +1,45 @@
+<!--@subject ¡Bienvenido/a, {{var customer.name}}! @-->
+<!--@vars
+{"store url=\"\"":"Store Url",
+"var logo_url":"Email Logo Image Url",
+"htmlescape var=$customer.name":"Customer Name",
+"store url=\"customer/account/\"":"Customer Account Url",
+"var customer.email":"Customer Email",
+"htmlescape var=$customer.password":"Customer Password"}
+@-->
+
+<!--@styles
+@-->
+
+{{template config_path="design/email/header"}}
+{{inlinecss file="email-inline.css"}}
+
+<table cellpadding="0" cellspacing="0" border="0">
+    <tr>
+        <td class="action-content">
+            <h1>Bienvenido/a a {{var store.getFrontendName()}}.</h1>
+            <p>Para comenzar hacé click en <a href="{{store url="customer/account/"}}">Iniciar Sesión</a> o en <a href="{{store url="customer/account/"}}">Mi Cuenta</a>, ubicado en la parte superior de cada página, e ingresá con tu correo electrónico y contraseña.</p>
+            <p class="highlighted-text">
+                Utilizá estos datos para iniciar sesión:<br/>
+                <strong>Correo electrónico:</strong> <span class="email-usuario">{{var customer.email}}</span><br/>
+                <strong>Contraseña:</strong> {{htmlescape var=$customer.password}}
+            </p>
+            <p>Al iniciar sesión en tu cuenta, podrás hacer lo siguiente:</p>
+            <ul class="registro-usuario">
+                <li><span>Proceder con mayor velocidad a través del checkout al hacer una compra.</span></li>
+                <li><span>Verificar el estado de tus pedidos</span></li>
+                <li><span>Consultar el historial de pedidos realizados</span></li>
+                <li><span>Modificar la información de tu cuenta</span></li>
+                <li><span>Cambiar tu contraseña</span></li>
+                <li><span>Guardar direcciones alternativas (¡Para envíos a múltiples familiares y amigos!)</span></li>
+            </ul>
+            <p>
+                Si tenés alguna consulta, no dudes en contactarnos a
+                <a href="mailto:{{var store_email}}">{{var store_email}}</a>
+                {{depend store_phone}} o por teléfono al <a href="tel:{{var phone}}">{{var store_phone}}</a>{{/depend}}.
+            </p>
+        </td>
+    </tr>
+</table>
+
+{{template config_path="design/email/footer"}}
