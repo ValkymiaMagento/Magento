@@ -10168,13 +10168,23 @@ body[class*="checkout-multishipping-"] .checkout-progress span {
   display: flex;
   padding-bottom: 12px;
 }
+.locales-valkymia .local .info-local .transporte div p {
+  padding-left: 5px;
+  font-size: 13px;
+}
+.locales-valkymia .local .info-local .transporte div p + P {
+  margin-top: 0;
+}
+.locales-valkymia .local .info-local .transporte div p + P span {
+  display: block;
+  margin-bottom: 5px;
+}
+.locales-valkymia .local .info-local .transporte div p + P span:last-child {
+  margin-bottom: 0;
+}
 .locales-valkymia .local .info-local .transporte div span.icon {
   width: 28px;
   min-width: 28px;
-}
-.locales-valkymia .local .info-local .transporte div p {
-  padding-left: 4px;
-  font-size: 13px;
 }
 .locales-valkymia .local .info-local .transporte div:last-child {
   padding-bottom: 0;
