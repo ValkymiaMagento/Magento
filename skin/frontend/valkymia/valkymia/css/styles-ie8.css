@@ -9419,17 +9419,22 @@ div.paypal-logo span > img {
 .cms-no-route .page-head h3 {
   border: none;
 }
+.cms-page-view .breadcrumbs,
+.cms-no-route .breadcrumbs {
+  display: none;
+}
 .cms-page-view .std img,
 .cms-no-route .std img {
   max-width: 100%;
 }
 .cms-page-view .std p,
 .cms-no-route .std p {
-  color: #454545;
+  color: #000000;
   font-family: "Lato", sans-serif;
   font-size: 14px;
-  font-style: italic;
-  line-height: 24px;
+  font-style: normal;
+  line-height: 22px;
+  font-weight: 300;
 }
 .cms-page-view .std h1,
 .cms-no-route .std h1 {
@@ -9575,6 +9580,84 @@ div.paypal-logo span > img {
 }
 #contactForm .fieldset .legend + .required {
   margin: 0;
+}
+
+.cms-page-view .img-valky {
+  width: 100%;
+}
+.cms-page-view .img-valky img {
+  display: block;
+  width: 100%;
+}
+.cms-page-view .content-cms {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.cms-page-view .content-cms h3 {
+  font-size: 15px;
+  color: #000000;
+  text-align: center;
+}
+.cms-page-view .content-cms.columnas-2 div {
+  width: 50%;
+  padding: 0 15px;
+}
+.cms-page-view .content-cms.columnas-2.valkymia {
+  max-width: 850px;
+  margin: 0 auto;
+}
+.cms-page-view .content-cms.columnas-2.valkymia h3 {
+  text-transform: none;
+  font-weight: 500;
+}
+.cms-page-view .content-cms.columnas-2.valkymia p {
+  text-align: justify;
+}
+.cms-page-view .content-cms.columnas-3 div {
+  width: 33.3333%;
+  padding: 0 15px;
+}
+.cms-page-view .content-cms.columnas-3.valkymia {
+  max-width: 850px;
+  margin: 0 auto;
+}
+.cms-page-view .content-cms.columnas-3.valkymia h3 {
+  text-transform: none;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.cms-page-view .content-cms.columnas-3.valkymia h5 {
+  text-transform: none;
+  font-weight: 500;
+  font-size: 12px;
+  color: gray;
+  text-align: center;
+  line-height: 1;
+  margin-bottom: 0;
+}
+.cms-page-view .content-cms.columnas-3.valkymia .separador {
+  font-size: 0;
+  height: 37px;
+  display: block;
+}
+.cms-page-view .content-cms.columnas-3.valkymia .separador:after {
+  content: '';
+  width: 30px;
+  height: 3px;
+  display: block;
+  background: #b3b3b3;
+  margin-top: 19px;
+}
+.cms-page-view .content-cms.columnas-3.valkymia p {
+  text-align: justify;
+}
+.cms-page-view .content-cms.columnas-3.valkymia img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
 /* ============================================ *

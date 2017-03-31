@@ -30,4 +30,6 @@ jQuery(document).ready(function () {
         });
     });
 
+    jQuery('.img-valky').insertAfter('header#header');
+
 });
