@@ -9419,6 +9419,13 @@ div.paypal-logo span > img {
 .cms-no-route .page-head h3 {
   border: none;
 }
+.cms-page-view .page-title h1,
+.cms-page-view .page-head h1,
+.cms-no-route .page-title h1,
+.cms-no-route .page-head h1 {
+  font-weight: 500;
+  padding: 20px 0;
+}
 .cms-page-view .breadcrumbs,
 .cms-no-route .breadcrumbs {
   display: none;
@@ -9433,8 +9440,14 @@ div.paypal-logo span > img {
   font-family: "Lato", sans-serif;
   font-size: 14px;
   font-style: normal;
-  line-height: 22px;
+  line-height: 18px;
   font-weight: 300;
+  margin-bottom: 20px;
+}
+.cms-page-view .std p a,
+.cms-no-route .std p a {
+  text-decoration: underline;
+  font-weight: 500;
 }
 .cms-page-view .std h1,
 .cms-no-route .std h1 {
@@ -9615,6 +9628,7 @@ div.paypal-logo span > img {
 }
 .cms-page-view .content-cms.columnas-2.valkymia p {
   text-align: justify;
+  line-height: 22px;
 }
 .cms-page-view .content-cms.columnas-3 div {
   width: 33.3333%;
@@ -9653,11 +9667,75 @@ div.paypal-logo span > img {
 }
 .cms-page-view .content-cms.columnas-3.valkymia p {
   text-align: justify;
+  line-height: 22px;
 }
 .cms-page-view .content-cms.columnas-3.valkymia img {
   max-width: 100%;
   display: block;
   margin: 0 auto;
+}
+
+.cms-page-view .preguntas-frecuentes .pregunta h3 {
+  border-top: 1px solid #cccccc;
+  padding: 20px 20px 20px 50px;
+  margin: 0;
+  cursor: pointer;
+  font-size: 17px;
+  text-transform: none;
+  position: relative;
+}
+.cms-page-view .preguntas-frecuentes .pregunta h3:hover {
+  background: #f7f7f7;
+}
+.cms-page-view .preguntas-frecuentes .pregunta h3:before {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 3px;
+  background: #000000;
+  position: absolute;
+  left: 17px;
+  top: 49%;
+}
+.cms-page-view .preguntas-frecuentes .pregunta h3:after {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 3px;
+  background: #000000;
+  position: absolute;
+  left: 17px;
+  top: 49%;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+.cms-page-view .preguntas-frecuentes .pregunta h3.active {
+  background: #f7f7f7;
+}
+.cms-page-view .preguntas-frecuentes .pregunta h3.active:after {
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+}
+.cms-page-view .preguntas-frecuentes .pregunta .info {
+  display: none;
+  padding: 20px 20px;
+}
+.cms-page-view .preguntas-frecuentes .pregunta:last-child h3 {
+  border-bottom: 1px solid #cccccc;
+}
+.cms-page-view .preguntas-frecuentes .pregunta:last-child h3.active {
+  border-bottom: 0;
+}
+.cms-page-view .preguntas-frecuentes .pregunta:last-child .info {
+  border-bottom: 1px solid #cccccc;
 }
 
 /* ============================================ *

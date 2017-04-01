@@ -32,4 +32,32 @@ jQuery(document).ready(function () {
 
     jQuery('.img-valky').insertAfter('header#header');
 
+
+    // PREGUNTAS FRECUENTES
+    var linkFaq = jQuery('.preguntas-frecuentes .pregunta h3');
+
+    linkFaq.click(function () {
+        linkFaq.not(this).removeClass('active');
+
+        jQuery('.preguntas-frecuentes .pregunta .info').slideUp();
+
+        var faqInfo = jQuery(this).parent().find('> .info');
+
+        if(faqInfo.is(':visible')) {
+            faqInfo.slideUp();
+        } else{
+            faqInfo.slideDown();
+        }
+
+        var h3Active = jQuery(this).parent().find('h3');
+
+        if(h3Active.hasClass('active')) {
+            jQuery(this).removeClass('active');
+        } else{
+            jQuery(this).addClass('active');
+        }
+    });
+
+
+
 });
