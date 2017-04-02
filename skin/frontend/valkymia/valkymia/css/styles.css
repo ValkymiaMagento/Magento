@@ -11539,6 +11539,8 @@ div.paypal-logo span > img {
 .cms-no-route .page-head h1 {
   font-weight: 500;
   padding: 20px 0;
+  border: none;
+  color: #000000;
 }
 .cms-page-view .breadcrumbs,
 .cms-no-route .breadcrumbs {
@@ -11563,21 +11565,29 @@ div.paypal-logo span > img {
   text-decoration: underline;
   font-weight: 500;
 }
-.cms-page-view .std h1,
-.cms-no-route .std h1 {
-  color: #000;
+.cms-page-view .std h1, .cms-page-view .std h2, .cms-page-view .std h3, .cms-page-view .std h4,
+.cms-no-route .std h1,
+.cms-no-route .std h2,
+.cms-no-route .std h3,
+.cms-no-route .std h4 {
+  color: #000000;
 }
-.cms-page-view .std h2,
-.cms-no-route .std h2 {
-  color: #000;
+.cms-page-view .std h3,
+.cms-no-route .std h3 {
+  font-size: 16px;
 }
 .cms-page-view .std li,
 .cms-no-route .std li {
   color: #454545;
   font-family: "Lato", sans-serif;
   font-size: 14px;
-  font-style: italic;
+  font-style: normal;
   line-height: 24px;
+  font-weight: 300;
+}
+.cms-page-view .std em,
+.cms-no-route .std em {
+  color: #000000;
 }
 .cms-page-view .col-left:after,
 .cms-no-route .col-left:after {
