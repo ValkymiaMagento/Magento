@@ -9624,7 +9624,7 @@ div.paypal-logo span > img {
   color: #000000;
   text-align: center;
 }
-.cms-page-view .content-cms.columnas-2 div {
+.cms-page-view .content-cms.columnas-2 div.columna {
   width: 50%;
   padding: 0 15px;
 }
@@ -9640,7 +9640,26 @@ div.paypal-logo span > img {
   text-align: justify;
   line-height: 22px;
 }
-.cms-page-view .content-cms.columnas-3 div {
+.cms-page-view .content-cms.columnas-2.envios img {
+  margin-bottom: 20px;
+}
+.cms-page-view .content-cms.columnas-2.envios .destacado {
+  background: #F5F4F8;
+  padding: 20px;
+}
+.cms-page-view .content-cms.columnas-2.envios .destacado h4 {
+  text-transform: none;
+  font-weight: 500;
+  text-transform: none;
+  color: #777777;
+  font-size: 20px;
+}
+.cms-page-view .content-cms.columnas-2.envios .destacado p {
+  text-align: justify;
+  line-height: 22px;
+  color: #777777;
+}
+.cms-page-view .content-cms.columnas-3 div.columna {
   width: 33.3333%;
   padding: 0 15px;
 }
@@ -9682,6 +9701,10 @@ div.paypal-logo span > img {
 .cms-page-view .content-cms.columnas-3.valkymia img {
   max-width: 100%;
   display: block;
+  margin: 0 auto;
+}
+.cms-page-view.cms-envios .col-main {
+  max-width: 850px;
   margin: 0 auto;
 }
 
@@ -10271,7 +10294,7 @@ body[class*="checkout-multishipping-"] .checkout-progress span {
 }
 
 /* ============================================ *
- * Locales Valkymia
+ * Locales Magentix
  * ============================================ */
 .cms-locales-valkymia .page-title {
   text-align: center;
