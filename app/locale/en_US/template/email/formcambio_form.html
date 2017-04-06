@@ -3,41 +3,41 @@
 {{template config_path="design/email/header"}}
 {{inlinecss file="email-inline.css"}}
 
-<table cellpadding="0" cellspacing="0" border="0" class="mail-contacto">
+<table cellpadding="0" cellspacing="0" border="0" class="mail-cambio">
     <tr>
         <td>
-            <p>Nombre: {{var data.name}}</p>
-            <p>Apellido: {{var data.lastname}}</p>
-            <p>E-mail: {{var data.email}}</p>
-            <p>Telefono: {{var data.telefono}}</p>
+            <p>Nombre: <strong>{{var data.name}}</strong></p>
+            <p>Apellido: <strong>{{var data.lastname}}</strong></p>
+            <p>E-mail: <strong>{{var data.email}}</strong></p>
+            <p>Telefono: <strong>{{var data.telefono}}</strong></p>
 
-            <h4>Dirección Completa</h4>
-            <p>Calle: {{var data.calle}}</p>
-            <p>Número: {{var data.numero}}</p>
-            <p>Piso: {{var data.piso}}</p>
-            <p>Depto: {{var data.depto}}</p>
-            <p>Código Postal: {{var data.cp}}</p>
-            <p>Localidad: {{var data.localidad}}</p>
-            <p>Provincia: {{var data.provincia}}</p>
-            <p>Observaciones: {{var data.observaciones}}</p>
+            <h3>Dirección Completa</h3>
+            <p>Calle: <strong>{{var data.address}}</strong></p>
+            <p>Número: <strong>{{var data.numero}}</strong></p>
+            <p>Piso: <strong>{{var data.piso}}</strong></p>
+            <p>Depto: <strong>{{var data.depto}}</strong></p>
+            <p>Código Postal: <strong>{{var data.cp}}</strong></p>
+            <p>Localidad: <strong>{{var data.localidad}}</strong></p>
+            <p>Provincia: <strong>{{var data.provincia}}</strong></p>
+            <p>Observaciones: <strong>{{var data.observaciones}}</strong></p>
 
-            <h4>¿Dónde realizó la compra?</h4>
-            <p>Compró en: {{var data.local}}</p>
-            <p>Si Compro en Web Nro Pedido: {{var data.nropedido}}</p>
-            <p>Si Compro en Mercado Libre, Usuario: {{var data.usuarioml}}</p>
+            <h3>¿Dónde realizó la compra?</h3>
+            <p>Compró en: <strong>{{var data.local}}</strong></p>
+            <p>Si Compro en Web Nro Pedido: <strong>{{var data.nropedido}}</strong></p>
+            <p>Si Compro en Mercado Libre, Usuario: <strong>{{var data.usuarioml}}</strong></p>
 
-            <h4>Seleccione la opción correspondiente a su caso.</h4>
-            <p>Que quiere: {{var data.caso}}</p>
+            <h3>Seleccione la opción correspondiente a su caso.</h3>
+            <p>Que quiere: <strong>{{var data.caso}}</strong></p>
 
-            <h4>Indique el motivo de su reclamo.</h4>
-            <p>Motivo: {{var data.reclamo}}</p>
-            <p>Error en Pedido: {{var data.errortalle}} {{var data.errorcolor}} {{var data.errormodelo}}</p>
+            <h3>Indique el motivo de su reclamo.</h3>
+            <p>Motivo: <strong>{{var data.reclamo}}</p>
+            <p>Error en Pedido: <strong>{{var data.errortalle}} - {{var data.errorcolor}} - {{var data.errormodelo}}</strong></p>
 
-            <h4>Modelos por los que desea cambiar:</h4>
-            <p>{{var data.comentario}}</p>
+            <h3>Modelos por los que desea cambiar:</h3>
+            <p><strong>{{var data.comentario}}</strong></p>
 
-            <h4>Acepta los Términos y Condiciones?:</h4>
-            <p>{{var data.acepto}}</p>
+            <h3>Acepta los Términos y Condiciones?:</h3>
+            <p><strong>{{var data.acepto}}</strong></p>
 
         </td>
     </tr>

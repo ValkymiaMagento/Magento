@@ -907,3 +907,14 @@ strong span.price {
 .price-box .price-including-tax {
   display: block;
 }
+
+.mail-cambio h3 {
+  color: #000000;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+.mail-cambio p {
+  margin: 0 0 8px 0;
+}

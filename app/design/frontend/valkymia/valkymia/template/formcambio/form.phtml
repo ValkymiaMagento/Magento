@@ -9,6 +9,7 @@
 
 <form action="<?php echo $this->getFormAction(); ?>" id="formcambioForm" method="post">
 
+
     <div class="fields">
         <div class="field">
             <div class="input-box">
@@ -44,8 +45,8 @@
     <div class="fields">
         <div class="field">
             <div class="input-box">
-                <label for="calle" class="required"><?php echo $this->__('Calle') ?> </label>
-                <input name="calle" id="calle" title="<?php echo $this->__('Calle') ?>" value="" class="required-entry input-text" type="text" />
+                <label for="address" class="required"><?php echo $this->__('Calle') ?> </label>
+                <input name="address" id="address" title="<?php echo $this->__('Calle') ?>" value="" class="required-entry input-text" type="text" />
             </div>
         </div>
         <div class="field">
@@ -59,7 +60,7 @@
     <div class="fields">
         <div class="field">
             <div class="input-box">
-                <label for="piso" class="required"><?php echo $this->__('Piso') ?> </label>
+                <label for="piso" class="required"><?php echo $this->__('Piso') ?></label>
                 <input name="piso" id="piso" title="<?php echo $this->__('Piso') ?>" value="" class="required-entry input-text" type="text" />
             </div>
         </div>
@@ -74,7 +75,7 @@
     <div class="fields">
         <div class="field">
             <div class="input-box">
-                <label for="cp" class="required"><?php echo $this->__('Código Postal') ?> </label>
+                <label for="cp" class="required"><?php echo $this->__('Código Postal') ?></label>
                 <input name="cp" id="cp" title="<?php echo $this->__('Código Postal') ?>" value="" class="required-entry input-text" type="text" />
             </div>
         </div>
@@ -194,7 +195,7 @@
 
     <div class="wide">
         <div class="field">
-            <textarea name="cometario" id="comentario" class="required-entry"></textarea>
+            <textarea name="comentario" id="comentario" class="required-entry"></textarea>
         </div>
     </div>
 
@@ -202,7 +203,7 @@
 
     <div class="wide">
         <div class="field checkbox">
-            <input type='checkbox' id='acepto' name='reclamo' value='Acepto' class="required-entry"/>
+            <input type='checkbox' id='acepto' name='acepto' value='Acepto' class="required-entry"/>
             <label for="acepto" class="required"><?php echo $this->__('ACEPTO LOS TÉRMINOS Y CONDICIONES.') ?></label>
         </div>
     </div>
