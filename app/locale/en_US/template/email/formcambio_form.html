@@ -7,16 +7,38 @@
     <tr>
         <td>
             <p>Nombre: {{var data.name}}</p>
+            <p>Apellido: {{var data.lastname}}</p>
+            <p>E-mail: {{var data.email}}</p>
+            <p>Telefono: {{var data.telefono}}</p>
 
-            <p>Apellido: {{var data.name}}</p>
+            <h4>Dirección Completa</h4>
+            <p>Calle: {{var data.calle}}</p>
+            <p>Número: {{var data.numero}}</p>
+            <p>Piso: {{var data.piso}}</p>
+            <p>Depto: {{var data.depto}}</p>
+            <p>Código Postal: {{var data.cp}}</p>
+            <p>Localidad: {{var data.localidad}}</p>
+            <p>Provincia: {{var data.provincia}}</p>
+            <p>Observaciones: {{var data.observaciones}}</p>
 
-            <p>Email: {{var data.email}}</p>
+            <h4>¿Dónde realizó la compra?</h4>
+            <p>Compró en: {{var data.local}}</p>
+            <p>Si Compro en Web Nro Pedido: {{var data.nropedido}}</p>
+            <p>Si Compro en Mercado Libre, Usuario: {{var data.usuarioml}}</p>
 
-            <p>Telefono: {{var data.telephone}}</p>
+            <h4>Seleccione la opción correspondiente a su caso.</h4>
+            <p>Que quiere: {{var data.caso}}</p>
 
-            <p>Adresse : {{var data.lastname}}</p>
+            <h4>Indique el motivo de su reclamo.</h4>
+            <p>Motivo: {{var data.reclamo}}</p>
+            <p>Error en Pedido: {{var data.errortalle}} {{var data.errorcolor}} {{var data.errormodelo}}</p>
 
-            <p>Compra: {{var data.local}}</p>
+            <h4>Modelos por los que desea cambiar:</h4>
+            <p>{{var data.comentario}}</p>
+
+            <h4>Acepta los Términos y Condiciones?:</h4>
+            <p>{{var data.acepto}}</p>
+
         </td>
     </tr>
 </table>

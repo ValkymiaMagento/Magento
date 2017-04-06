@@ -1,17 +1,24 @@
 <div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
 
+<?php  $destacadoHome = Mage::getModel('cms/block')->load('formulario_cambio_imagen')->getIsActive() ?>
+<?php if (count($destacadoHome) > 0): ?>
+    <div class="imagen-titulo">
+        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('formulario_cambio_imagen')->toHtml(); ?>
+    </div>
+<?php endif; ?>
+
 <form action="<?php echo $this->getFormAction(); ?>" id="formcambioForm" method="post">
 
     <div class="fields">
         <div class="field">
             <div class="input-box">
-                <label for="name"><?php echo $this->__('Name') ?> <span class="required">*</span></label><br />
-                <input name="name" id="name" title="<?php echo $this->__('Name') ?>" value="<?php echo $this->htmlEscape(Mage::helper('formcambio')->getUserName()) ?>" class="required-entry input-text" type="text" />
+                <label for="name" class="required"><?php echo $this->__('Nombre') ?></label>
+                <input name="name" id="name" title="<?php echo $this->__('Nombre') ?>" value="<?php echo $this->htmlEscape(Mage::helper('formcambio')->getUserName()) ?>" class="required-entry input-text" type="text" />
             </div>
         </div>
         <div class="field">
             <div class="input-box">
-                <label for="lastname"><?php echo $this->__('Last Name') ?> <span class="required">*</span></label><br />
+                <label for="lastname" class="required"><?php echo $this->__('Last Name') ?></label>
                 <input name="lastname" id="lastname" title="<?php echo $this->__('Last Name') ?>" value="" class="required-entry input-text" type="text" />
             </div>
         </div>
@@ -20,14 +27,79 @@
     <div class="fields">
         <div class="field">
             <div class="input-box">
-                <label for="telephone"><?php echo $this->__('Telephone') ?> </label><br />
-                <input name="telephone" id="telephone" title="<?php echo $this->__('Telephone') ?>" value="" class="input-text" type="text" />
+                <label for="telefono" class="required"><?php echo $this->__('Teléfono') ?> </label>
+                <input name="telefono" id="telefono" title="<?php echo $this->__('Teléfono') ?>" value="" class="required-entry input-text" type="text" />
             </div>
         </div>
         <div class="field">
             <div class="input-box">
-                <label for="email" class="required"><?php echo $this->__('Email') ?></label>
-                <input name="email" id="email" title="<?php echo $this->__('Email') ?>" value="" class="required-entry input-text" type="email" />
+                <label for="email" class="required"><?php echo $this->__('E-mail') ?></label>
+                <input name="email" id="email" title="<?php echo $this->__('E-mail') ?>" value="" class="required-entry input-text" type="email" />
+            </div>
+        </div>
+    </div>
+
+    <h4>Dirección Completa</h4>
+
+    <div class="fields">
+        <div class="field">
+            <div class="input-box">
+                <label for="calle" class="required"><?php echo $this->__('Calle') ?> </label>
+                <input name="calle" id="calle" title="<?php echo $this->__('Calle') ?>" value="" class="required-entry input-text" type="text" />
+            </div>
+        </div>
+        <div class="field">
+            <div class="input-box">
+                <label for="numero" class="required"><?php echo $this->__('Numero') ?></label>
+                <input name="numero" id="numero" title="<?php echo $this->__('Numero') ?>" value="" class="required-entry input-text" type="text" />
+            </div>
+        </div>
+    </div>
+
+    <div class="fields">
+        <div class="field">
+            <div class="input-box">
+                <label for="piso" class="required"><?php echo $this->__('Piso') ?> </label>
+                <input name="piso" id="piso" title="<?php echo $this->__('Piso') ?>" value="" class="required-entry input-text" type="text" />
+            </div>
+        </div>
+        <div class="field">
+            <div class="input-box">
+                <label for="depto" class="required"><?php echo $this->__('Depto') ?></label>
+                <input name="depto" id="depto" title="<?php echo $this->__('Depto') ?>" value="" class="required-entry input-text" type="text" />
+            </div>
+        </div>
+    </div>
+
+    <div class="fields">
+        <div class="field">
+            <div class="input-box">
+                <label for="cp" class="required"><?php echo $this->__('Código Postal') ?> </label>
+                <input name="cp" id="cp" title="<?php echo $this->__('Código Postal') ?>" value="" class="required-entry input-text" type="text" />
+            </div>
+        </div>
+        <div class="field">
+            <div class="input-box">
+                <label for="localidad" class="required"><?php echo $this->__('Localidad') ?></label>
+                <input name="localidad" id="localidad" title="<?php echo $this->__('Localidad') ?>" value="" class="required-entry input-text" type="text" />
+            </div>
+        </div>
+    </div>
+
+    <div class="fields">
+        <div class="field">
+            <div class="input-box">
+                <label for="provincia" class="required"><?php echo $this->__('Provincia') ?> </label>
+                <input name="provincia" id="provincia" title="<?php echo $this->__('Provincia') ?>" value="" class="required-entry input-text" type="text" />
+            </div>
+        </div>
+    </div>
+
+    <div class="wide">
+        <div class="field">
+            <div class="input-box">
+                <label for="observaciones"><?php echo $this->__('Observaciones (Barrio, ETC)') ?> </label>
+                <input name="observaciones" id="observaciones" title="<?php echo $this->__('Observaciones (Barrio, ETC)') ?>" value="" class="input-text" type="text" />
             </div>
         </div>
     </div>
@@ -37,39 +109,154 @@
     <div class="fields">
         <div class="field">
             <div class="input-box radio">
-                <input type='radio' id='web' name='local' value='valkymia.com' />
+                <input type='radio' id='web' name='local' value='valkymia.com' class="required-entry" />
                 <label for="web" class="required"><?php echo $this->__('valkymia.com') ?></label>
+            </div>
+            <div class="extra-info web" style="display: none;">
+                <label for="nropedido" class="required"><?php echo $this->__('Nro. de Pedido') ?></label>
+                <input name="nropedido" id="nropedido" title="<?php echo $this->__('Nro. de Pedido') ?>" value="" class="required-entry input-text" type="text" />
+            </div>
+
+        </div>
+        <div class="field">
+            <div class="input-box radio">
+                <input type='radio' id='mercadolibre' name='local' value='Mercado Libre' class="required-entry"/>
+                <label for="mercadolibre" class="required"><?php echo $this->__('Mercado Libre') ?></label>
+            </div>
+            <div class="extra-info mercadolibre" style="display: none;">
+                <label for="usuarioml" class="required"><?php echo $this->__('Usuario de Mercado Libre') ?></label>
+                <input name="usuarioml" id="usuarioml" title="<?php echo $this->__('Usuario de Mercado Libre') ?>" value="" class="required-entry input-text" type="text" />
+            </div>
+        </div>
+    </div>
+
+    <h4>Seleccione la opción correspondiente a su caso.</h4>
+
+    <div class="fields">
+        <div class="field">
+            <div class="input-box radio">
+                <input type='radio' id='devolucion' name='caso' value='Devolución' class="required-entry" />
+                <label for="devolucion" class="required"><?php echo $this->__('Devolución') ?></label>
             </div>
         </div>
         <div class="field">
             <div class="input-box radio">
-                <input type='radio' id='mercadolibre' name='local' value='Mercado Libre'/>
-                <label for="mercadolibre" class="required"><?php echo $this->__('Mercado Libre') ?></label>
+                <input type='radio' id='cambio' name='caso' value='Cambio' class="required-entry"/>
+                <label for="cambio" class="required"><?php echo $this->__('Cambio') ?></label>
             </div>
         </div>
     </div>
+
+    <h4>Indique el motivo de su reclamo.</h4>
 
     <div class="fields">
         <div class="field">
-            <div class="input-box">
-                <label for="address"  class="required"><?php echo $this->__('Address') ?></label>
-                <input name="address" id="address" title="<?php echo $this->__('Address') ?>" value="" class="required-entry input-text" type="text" />
+            <div class="input-box radio">
+                <input type='radio' id='problemtalle' name='reclamo' value='Problema de Talle' class="required-entry" />
+                <label for="problemtalle" class="required"><?php echo $this->__('Problema de Talle') ?></label>
             </div>
         </div>
         <div class="field">
-            <div class="input-box">
-
+            <div class="input-box radio">
+                <input type='radio' id='nogusto' name='reclamo' value='No me gustó' class="required-entry"/>
+                <label for="nogusto" class="required"><?php echo $this->__('No me gustó') ?></label>
+            </div>
+        </div>
+        <div class="field">
+            <div class="input-box radio">
+                <input type='radio' id='defecto' name='reclamo' value='Producto Defectuoso' class="required-entry" />
+                <label for="defecto" class="required"><?php echo $this->__('Producto Defectuoso') ?></label>
+            </div>
+        </div>
+        <div class="field">
+            <div class="input-box radio">
+                <input type='radio' id='nopedi' name='reclamo' value='Recibi algo que no pedi' class="required-entry"/>
+                <label for="nopedi" class="required"><?php echo $this->__('Recibi algo que no pedi') ?></label>
+            </div>
+            <div class="extra-info nopedi" style="display: none;">
+                <div class="input-box checkbox">
+                    <input type='checkbox' id='errortalle' name='errortalle' value='Error Talle' class="required-entry"/>
+                    <label for="errortalle" class="required"><?php echo $this->__('Error Talle') ?></label>
+                </div>
+                <div class="input-box checkbox">
+                    <input type='checkbox' id='errorcolor' name='errorcolor' value='Error Color' class="required-entry"/>
+                    <label for="errorcolor" class="required"><?php echo $this->__('Error Color') ?></label>
+                </div>
+                <div class="input-box checkbox">
+                    <input type='checkbox' id='errormodelo' name='errormodelo' value='Error Modelo' class="required-entry"/>
+                    <label for="errormodelo" class="required"><?php echo $this->__('Error Modelo') ?></label>
+                </div>
             </div>
         </div>
     </div>
 
-    <br><br><br>
+    <h4>Indique en el siguiente campo el/los modelos por los cuales deseas realizar el cambio(nombre del artículo, talle, color, link de la publicación).</h4>
+
+    <div class="wide">
+        <div class="field">
+            <textarea name="cometario" id="comentario" class="required-entry"></textarea>
+        </div>
+    </div>
+
+    <div class="info"><p>Términos y condiciones: declaro bajo la misma que la prenda que estoy cambiando/devolviendo se encuentra en perfecto estado, con las etiquetas correspondientes y acepto los términos y condiciones del procedimiento de cambio/devolución.</p></div>
+
+    <div class="wide">
+        <div class="field checkbox">
+            <input type='checkbox' id='acepto' name='reclamo' value='Acepto' class="required-entry"/>
+            <label for="acepto" class="required"><?php echo $this->__('ACEPTO LOS TÉRMINOS Y CONDICIONES.') ?></label>
+        </div>
+    </div>
+
 
     <div class="button-set">
-        <button class="form-button" type="submit"><span><?php echo $this->__('Submit') ?></span></button>
+        <button class="button" type="submit"><span><?php echo $this->__('Submit') ?></span></button>
     </div>
 </form>
 
 <script type="text/javascript">
     var magazineForm = new VarienForm('formcambioForm', true);
+
+    jQuery(document).ready(function () {
+
+        jQuery('.radio input#web').click(function () {
+            jQuery('.extra-info.mercadolibre').hide();
+            jQuery('.extra-info.web').show();
+            jQuery(this).parent().parent().parent().find('input[type="radio"]').removeClass('required-entry validation-failed');
+            jQuery(this).parent().parent().parent().find('.validation-advice').hide();
+        });
+
+        jQuery('.radio input#mercadolibre').click(function () {
+            jQuery('.extra-info.mercadolibre').show();
+            jQuery('.extra-info.web').hide();
+            jQuery(this).parent().parent().parent().find('input[type="radio"]').removeClass('required-entry validation-failed');
+            jQuery(this).parent().parent().parent().find('.validation-advice').hide();
+        });
+
+        jQuery('.radio input[name="caso"]').click(function () {
+            jQuery(this).parent().parent().parent().find('input[name="caso"]').removeClass('required-entry validation-failed');
+            jQuery(this).parent().parent().parent().find('.validation-advice').hide();
+        });
+
+        jQuery('.radio input[name="reclamo"]').click(function () {
+            jQuery(this).parent().parent().parent().find('input[type="radio"]').removeClass('required-entry validation-failed');
+            jQuery(this).parent().parent().parent().find('.validation-advice').hide();
+            jQuery(this).parent().parent().parent().find('input[type="checkbox"]').prop('checked', false);
+            jQuery(this).parent().parent().parent().find('input[type="checkbox"]').addClass('required-entry');
+        });
+
+
+        jQuery('.radio input#problemtalle, .radio input#nogusto, .radio input#defecto').click(function () {
+            jQuery('.extra-info.nopedi').hide();
+        });
+
+        jQuery('.radio input#nopedi').click(function () {
+            jQuery('.extra-info.nopedi').show();
+        });
+        jQuery('.extra-info.nopedi input[type="checkbox"]').click(function () {
+            jQuery(this).parent().parent().find('input[type="checkbox"]').removeClass('required-entry validation-failed');
+            jQuery(this).parent().parent().find('.validation-advice').hide();
+        });
+
+    });
+
 </script>
