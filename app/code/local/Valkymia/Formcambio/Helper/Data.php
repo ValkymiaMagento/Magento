@@ -1,6 +1,6 @@
 <?php
 
-class Valkymia_FormularioCambio_Helper_Data extends Mage_Core_Helper_Abstract {
+class Valkymia_Formcambio_Helper_Data extends Mage_Core_Helper_Abstract {
     public function getUserName() {
         if (!Mage::getSingleton('customer/session')->isLoggedIn()) return '';
 

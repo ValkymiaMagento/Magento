@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default></default>
+    <formcambio_index_index>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+            <action method="setHeaderTitle" translate="title" module="formcambio"><title>Formcambio</title></action>
+        </reference>
+        <reference name="content">
+            <block type="core/template" name="formcambioForm" template="formcambio/form.phtml"/>
+        </reference>
+    </formcambio_index_index>
+</layout>

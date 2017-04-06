@@ -1,11 +1,11 @@
 <?php
 
-class Valkymia_FormularioCambio_IndexController extends Mage_Core_Controller_Front_Action {
+class Valkymia_Formcambio_IndexController extends Mage_Core_Controller_Front_Action {
 
-    const XML_PATH_EMAIL_RECIPIENT  = 'formulariocambio/email/recipient_email';
-    const XML_PATH_EMAIL_SENDER     = 'formulariocambio/email/sender_email_identity';
-    const XML_PATH_EMAIL_TEMPLATE   = 'formulariocambio/email/email_template';
-    const XML_PATH_ENABLED          = 'formulariocambio/formulariocambio/enabled';
+    const XML_PATH_EMAIL_RECIPIENT  = 'formcambio/email/recipient_email';
+    const XML_PATH_EMAIL_SENDER     = 'formcambio/email/sender_email_identity';
+    const XML_PATH_EMAIL_TEMPLATE   = 'formcambio/email/email_template';
+    const XML_PATH_ENABLED          = 'formcambio/formcambio/enabled';
 
     public function preDispatch() {
         parent::preDispatch();
@@ -17,7 +17,7 @@ class Valkymia_FormularioCambio_IndexController extends Mage_Core_Controller_Fro
 
     public function indexAction() {
         $this->loadLayout();
-        $this->getLayout()->getBlock('formulariocambioForm')->setFormAction( Mage::getUrl('*/*/post') );
+        $this->getLayout()->getBlock('formcambioForm')->setFormAction( Mage::getUrl('*/*/post') );
 
         $this->_initLayoutMessages('customer/session');
         $this->_initLayoutMessages('catalog/session');
@@ -30,7 +30,7 @@ class Valkymia_FormularioCambio_IndexController extends Mage_Core_Controller_Fro
             $translate = Mage::getSingleton('core/translate');
             /* @var $translate Mage_Core_Model_Translate */
             $translate->setTranslateInline(false);
-                        
+
             try {
                 $postObject = new Varien_Object();
                 $postObject->setData($post);
@@ -61,15 +61,15 @@ class Valkymia_FormularioCambio_IndexController extends Mage_Core_Controller_Fro
 
                 $translate->setTranslateInline(true);
 
-                Mage::getSingleton('customer/session')->addSuccess(Mage::helper('formulariocambio')->__('Your inquiry was submitted'));
-                                
+                Mage::getSingleton('customer/session')->addSuccess(Mage::helper('formcambio')->__('Your inquiry was submitted'));
+
                 $this->_redirect('*/*/');
 
                 return;
             } catch (Exception $e) {
                 $translate->setTranslateInline(true);
 
-                Mage::getSingleton('customer/session')->addError(Mage::helper('formulariocambio')->__('Unable to submit your request. Please, try again later'));
+                Mage::getSingleton('customer/session')->addError(Mage::helper('formcambio')->__('Unable to submit your request. Please, try again later'));
                 $this->_redirect('*/*/');
                 return;
             }

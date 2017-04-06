@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <Valkymia_FormularioCambio>
+        <Valkymia_Formcambio>
             <active>true</active>
             <codePool>local</codePool>
-        </Valkymia_FormularioCambio>
+        </Valkymia_Formcambio>
     </modules>
 </config>
