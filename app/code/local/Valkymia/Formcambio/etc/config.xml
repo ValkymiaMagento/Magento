@@ -43,7 +43,7 @@
                 <formcambio_email_email_template translate="label" module="formcambio">
                     <label>Formcambio Form</label>
                     <file>formcambio_form.html</file>
-                    <type>text</type>
+                    <type>html</type>
                 </formcambio_email_email_template>
             </email>
         </template>
