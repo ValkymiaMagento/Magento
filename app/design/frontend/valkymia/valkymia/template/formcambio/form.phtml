@@ -2,23 +2,70 @@
 
 <form action="<?php echo $this->getFormAction(); ?>" id="formcambioForm" method="post">
 
-    <div class="input-box">
-        <label for="name"><?php echo $this->__('Name') ?> <span class="required">*</span></label><br />
-        <input name="name" id="name" title="<?php echo $this->__('Name') ?>" value="<?php echo $this->htmlEscape(Mage::helper('formcambio')->getUserName()) ?>" class="required-entry input-text" type="text" />
+    <div class="fields">
+        <div class="field">
+            <div class="input-box">
+                <label for="name"><?php echo $this->__('Name') ?> <span class="required">*</span></label><br />
+                <input name="name" id="name" title="<?php echo $this->__('Name') ?>" value="<?php echo $this->htmlEscape(Mage::helper('formcambio')->getUserName()) ?>" class="required-entry input-text" type="text" />
+            </div>
+        </div>
+        <div class="field">
+            <div class="input-box">
+                <label for="lastname"><?php echo $this->__('Last Name') ?> <span class="required">*</span></label><br />
+                <input name="lastname" id="lastname" title="<?php echo $this->__('Last Name') ?>" value="" class="required-entry input-text" type="text" />
+            </div>
+        </div>
     </div>
 
-    <div class="input-box">
-        <label for="address"><?php echo $this->__('Address') ?> <span class="required">*</span></label><br />
-        <input name="address" id="address" title="<?php echo $this->__('Address') ?>" value="" class="required-entry input-text" type="text" />
+    <div class="fields">
+        <div class="field">
+            <div class="input-box">
+                <label for="telephone"><?php echo $this->__('Telephone') ?> </label><br />
+                <input name="telephone" id="telephone" title="<?php echo $this->__('Telephone') ?>" value="" class="input-text" type="text" />
+            </div>
+        </div>
+        <div class="field">
+            <div class="input-box">
+                <label for="email" class="required"><?php echo $this->__('Email') ?></label>
+                <input name="email" id="email" title="<?php echo $this->__('Email') ?>" value="" class="required-entry input-text" type="email" />
+            </div>
+        </div>
     </div>
 
-    <div class="input-box">
-        <label for="telephone"><?php echo $this->__('Telephone') ?> </label><br />
-        <input name="telephone" id="telephone" title="<?php echo $this->__('Telephone') ?>" value="" class="input-text" type="text" />
+    <h4>¿Dónde realizó la compra?</h4>
+
+    <div class="fields">
+        <div class="field">
+            <div class="input-box radio">
+                <input type='radio' id='web' name='local' value='valkymia.com' />
+                <label for="web" class="required"><?php echo $this->__('valkymia.com') ?></label>
+            </div>
+        </div>
+        <div class="field">
+            <div class="input-box radio">
+                <input type='radio' id='mercadolibre' name='local' value='Mercado Libre'/>
+                <label for="mercadolibre" class="required"><?php echo $this->__('Mercado Libre') ?></label>
+            </div>
+        </div>
     </div>
+
+    <div class="fields">
+        <div class="field">
+            <div class="input-box">
+                <label for="address"  class="required"><?php echo $this->__('Address') ?></label>
+                <input name="address" id="address" title="<?php echo $this->__('Address') ?>" value="" class="required-entry input-text" type="text" />
+            </div>
+        </div>
+        <div class="field">
+            <div class="input-box">
+
+            </div>
+        </div>
+    </div>
+
+    <br><br><br>
 
     <div class="button-set">
-        <p class="required"><?php echo $this->__('* Required Fields') ?></p>
         <button class="form-button" type="submit"><span><?php echo $this->__('Submit') ?></span></button>
     </div>
 </form>
