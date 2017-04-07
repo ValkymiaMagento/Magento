@@ -2705,6 +2705,26 @@ body {
   border-bottom: 1px solid #eeeeee;
 }
 
+.top-info {
+  width: 100%;
+  border-bottom: 1px solid #f2f2f2;
+}
+.top-info p {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+.top-info a {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  line-higth: 1;
+}
+.top-info img {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
 .page-header {
   max-width: 100%;
   width: 100%;
@@ -3030,7 +3050,7 @@ nav#nav {
   text-transform: uppercase;
 }
 
-.nav-primary li.level0.last a {
+.nav-primary li.level0.first > a {
   color: #80113a;
   font-weight: bold;
 }

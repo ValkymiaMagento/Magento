@@ -28,6 +28,14 @@
  */
 ?>
 
+
+<?php $topHeader = $this->getLayout()->createBlock('cms/block')->setBlockId('top_info_valkymia')->toHtml(); ?>
+<?php if (!empty($topHeader)): ?>
+    <div class="top-info">
+        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('top_info_valkymia')->toHtml(); ?>
+    </div>
+<?php endif; ?>
+
 <header id="header" class="page-header">
     <div class="page-header-container">
         
