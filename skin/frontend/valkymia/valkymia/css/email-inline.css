@@ -202,7 +202,7 @@ td.store-info a {
   width: 150px;
 }
 .container-table-footer td.copy-mail {
-  text-align: center;
+  text-align: right;
   vertical-align: middle;
   font-size: 10px;
   color: #696969;

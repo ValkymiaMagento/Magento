@@ -123,7 +123,7 @@
                     <li class="method-<?php echo preg_replace("/[^_a-zA-Z0-9-]/", '-', $method); ?>"><?php echo $methodHtml; ?></li>
                 <?php endif; ?>
             <?php endforeach; ?>
-            <li class="seguir-comprando"><a href="#">Seguir Comprando</a></li>
+            <li class="seguir-comprando"><a href="<?php echo $this->getUrl('') ?>">Seguir Comprando</a></li>
         </ul>
     <?php endif; ?>
 
