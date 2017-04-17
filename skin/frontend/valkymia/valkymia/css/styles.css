@@ -3547,7 +3547,7 @@ a.skip-link {
 }
 
 @media only screen and (max-width: 999px) {
-  #menu_mobile {
+  .mm-opened.mm-blocking #menu_mobile {
     display: block;
   }
 
