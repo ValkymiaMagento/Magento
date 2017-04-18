@@ -1,0 +1,718 @@
+<?xml version="1.0"?>
+<config>
+   <sections>
+    <carriers>
+        <groups>
+            <chmultistorepickupmodule translate="label" module="shipping">
+                <label>Multi Store Pickup</label>
+                <frontend_type>text</frontend_type>
+                <sort_order>13</sort_order>
+                <show_in_default>1</show_in_default>
+                <show_in_website>1</show_in_website>
+                <show_in_store>1</show_in_store>
+                   <fields>
+                        <active translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </active>
+						 <allowed_methods translate="label">
+                            <label>Allowed methods</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>Collinsharper_Multistorepickup_Model_Source_Method</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </allowed_methods>
+					
+					
+						<sort_order translate="label">
+                            <label>Sort order</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>200</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </sort_order>
+                        <title translate="label">
+                            <label>Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title>                       
+
+
+                        <sallowspecific translate="label">
+                            <label>Ship to applicable countries</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>6</sort_order>
+                            <frontend_class>shipping-applicable-country</frontend_class>
+                            <source_model>adminhtml/system_config_source_shipping_allspecificcountries</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </sallowspecific>
+                        <specificcountry translate="label">
+                            <label>Ship to Specific countries</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <sort_order>7</sort_order>
+                            <source_model>adminhtml/system_config_source_country</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </specificcountry>
+                        <specificerrmsg translate="label">
+                            <label>Displayed Error Message</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>120</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </specificerrmsg>
+				<price_type translate="label">
+                            <label>Price Calculation Type</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>shipping/source_handlingType</source_model>
+                            <sort_order>18</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+				</price_type>
+       <chmpickup01_title translate="label">
+                            <label>Store 01 Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>27</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup01_title>
+       <chmpickup01_price translate="label">
+                            <label>Store 01 Price</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>28</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup01_price>
+      <chmpickup01_address translate="label">
+                            <label>Store 01 Address</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>29</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup01_address>
+                
+     <chmpickup02_title translate="label">
+                            <label>Store 02 Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>31</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup02_title>
+       <chmpickup02_price translate="label">
+                            <label>Store 02 Price</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>32</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup02_price>
+      <chmpickup02_address translate="label">
+                            <label>Store 02 Address</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>33</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup02_address>
+                
+     <chmpickup03_title translate="label">
+                            <label>Store 03 Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>34</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup03_title>
+       <chmpickup03_price translate="label">
+                            <label>Store 03 Price</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>35</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup03_price>
+      <chmpickup03_address translate="label">
+                            <label>Store 03 Address</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>36</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup03_address>
+                
+     <chmpickup04_title translate="label">
+                            <label>Store 04 Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>37</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup04_title>
+       <chmpickup04_price translate="label">
+                            <label>Store 04 Price</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>38</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup04_price>
+      <chmpickup04_address translate="label">
+                            <label>Store 04 Address</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>39</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup04_address>
+                
+     <chmpickup05_title translate="label">
+                            <label>Store 05 Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>41</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup05_title>
+       <chmpickup05_price translate="label">
+                            <label>Store 05 Price</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>42</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup05_price>
+      <chmpickup05_address translate="label">
+                            <label>Store 05 Address</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>43</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup05_address>
+                
+     <chmpickup06_title translate="label">
+                            <label>Store 06 Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>44</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup06_title>
+       <chmpickup06_price translate="label">
+                            <label>Store 06 Price</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>45</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup06_price>
+      <chmpickup06_address translate="label">
+                            <label>Store 06 Address</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>46</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup06_address>
+                
+     <chmpickup07_title translate="label">
+                            <label>Store 07 Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>47</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup07_title>
+       <chmpickup07_price translate="label">
+                            <label>Store 07 Price</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>48</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup07_price>
+      <chmpickup07_address translate="label">
+                            <label>Store 07 Address</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>49</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup07_address>
+                
+     <chmpickup08_title translate="label">
+                            <label>Store 08 Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup08_title>
+       <chmpickup08_price translate="label">
+                            <label>Store 08 Price</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>51</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup08_price>
+      <chmpickup08_address translate="label">
+                            <label>Store 08 Address</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>52</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup08_address>
+                
+     <chmpickup09_title translate="label">
+                            <label>Store 09 Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>53</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup09_title>
+       <chmpickup09_price translate="label">
+                            <label>Store 09 Price</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>54</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup09_price>
+      <chmpickup09_address translate="label">
+                            <label>Store 09 Address</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>55</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup09_address>
+                
+     <chmpickup10_title translate="label">
+                            <label>Store 10 Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>56</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup10_title>
+       <chmpickup10_price translate="label">
+                            <label>Store 10 Price</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>57</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup10_price>
+      <chmpickup10_address translate="label">
+                            <label>Store 10 Address</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>58</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup10_address>
+                
+     <chmpickup11_title translate="label">
+                            <label>Store 11 Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>59</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup11_title>
+       <chmpickup11_price translate="label">
+                            <label>Store 11 Price</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup11_price>
+      <chmpickup11_address translate="label">
+                            <label>Store 11 Address</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>61</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup11_address>
+                
+     <chmpickup12_title translate="label">
+                            <label>Store 12 Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>62</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup12_title>
+       <chmpickup12_price translate="label">
+                            <label>Store 12 Price</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>63</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup12_price>
+      <chmpickup12_address translate="label">
+                            <label>Store 12 Address</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>64</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup12_address>
+                
+     <chmpickup13_title translate="label">
+                            <label>Store 13 Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>65</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup13_title>
+       <chmpickup13_price translate="label">
+                            <label>Store 13 Price</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>66</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup13_price>
+      <chmpickup13_address translate="label">
+                            <label>Store 13 Address</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>67</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup13_address>
+                
+     <chmpickup14_title translate="label">
+                            <label>Store 14 Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>68</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup14_title>
+       <chmpickup14_price translate="label">
+                            <label>Store 14 Price</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>69</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup14_price>
+      <chmpickup14_address translate="label">
+                            <label>Store 14 Address</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup14_address>
+                
+     <chmpickup15_title translate="label">
+                            <label>Store 15 Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>71</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup15_title>
+       <chmpickup15_price translate="label">
+                            <label>Store 15 Price</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>72</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup15_price>
+      <chmpickup15_address translate="label">
+                            <label>Store 15 Address</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>73</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chmpickup15_address>
+
+       <chmpickup16_title translate="label">
+                           <label>Store 16 Title</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>74</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </chmpickup16_title>
+       <chmpickup16_price translate="label">
+                           <label>Store 16 Price</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>75</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </chmpickup16_price>
+       <chmpickup16_address translate="label">
+                           <label>Store 16 Address</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>76</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </chmpickup16_address>
+
+                       <chmpickup17_title translate="label">
+                           <label>Store 17 Title</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>77</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </chmpickup17_title>
+                       <chmpickup17_price translate="label">
+                           <label>Store 17 Price</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>78</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </chmpickup17_price>
+                       <chmpickup17_address translate="label">
+                           <label>Store 17 Address</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>79</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </chmpickup17_address>
+
+                       <chmpickup18_title translate="label">
+                           <label>Store 18 Title</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>80</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </chmpickup18_title>
+                       <chmpickup18_price translate="label">
+                           <label>Store 18 Price</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>81</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </chmpickup18_price>
+                       <chmpickup18_address translate="label">
+                           <label>Store 18 Address</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>82</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </chmpickup18_address>
+
+                       <chmpickup19_title translate="label">
+                           <label>Store 19 Title</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>83</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </chmpickup19_title>
+                       <chmpickup19_price translate="label">
+                           <label>Store 19 Price</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>84</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </chmpickup19_price>
+                       <chmpickup19_address translate="label">
+                           <label>Store 19 Address</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>85</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </chmpickup19_address>
+
+                       <chmpickup20_title translate="label">
+                           <label>Store 20 Title</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>86</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </chmpickup20_title>
+                       <chmpickup20_price translate="label">
+                           <label>Store 20 Price</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>87</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </chmpickup20_price>
+                       <chmpickup20_address translate="label">
+                           <label>Store 20 Address</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>88</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </chmpickup20_address>
+
+                       <chmpickup21_title translate="label">
+                           <label>Store 21 Title</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>89</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </chmpickup21_title>
+                       <chmpickup21_price translate="label">
+                           <label>Store 21 Price</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>90</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </chmpickup21_price>
+                       <chmpickup21_address translate="label">
+                           <label>Store 21 Address</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>91</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </chmpickup21_address>
+
+                       <chmpickup22_title translate="label">
+                           <label>Store 22 Title</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>92</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </chmpickup22_title>
+                       <chmpickup22_price translate="label">
+                           <label>Store 22 Price</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>93</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </chmpickup22_price>
+                       <chmpickup22_address translate="label">
+                           <label>Store 22 Address</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>94</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </chmpickup22_address>
+
+                       <chmpickup23_title translate="label">
+                           <label>Store 23 Title</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>95</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </chmpickup23_title>
+                       <chmpickup23_price translate="label">
+                           <label>Store 23 Price</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>96</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </chmpickup23_price>
+                       <chmpickup23_address translate="label">
+                           <label>Store 23 Address</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>97</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </chmpickup23_address>
+
+                       <chmpickup24_title translate="label">
+                           <label>Store 24 Title</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>98</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </chmpickup24_title>
+                       <chmpickup24_price translate="label">
+                           <label>Store 24 Price</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>99</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </chmpickup24_price>
+                       <chmpickup24_address translate="label">
+                           <label>Store 24 Address</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>100</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </chmpickup24_address>
+
+                       <chmpickup25_title translate="label">
+                           <label>Store 25 Title</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>101</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </chmpickup25_title>
+                       <chmpickup25_price translate="label">
+                           <label>Store 25 Price</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>102</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </chmpickup25_price>
+                       <chmpickup25_address translate="label">
+                           <label>Store 25 Address</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>103</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </chmpickup25_address>
+
+						</fields>
+                </chmultistorepickupmodule>
+            </groups>
+        </carriers>
+    </sections>
+</config>

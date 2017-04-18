@@ -38,8 +38,8 @@ abstract class Todopago_Modulodepago2_Model_Cybersource_Cybersource extends Mage
 		$payDataOperacion ['CSBTLASTNAME'] = $this->getField($billingAdress->getLastname());
 		$payDataOperacion ['CSBTPOSTALCODE'] = $this->getField($billingAdress->getPostcode());
 		$payDataOperacion ['CSBTPHONENUMBER'] = $this->getField($billingAdress->getTelephone());
-		$payDataOperacion ['CSBTSTATE'] =  strtoupper(substr($this->getField($billingAdress->getRegion()),0,1));
-		$payDataOperacion ['CSBTSTREET1'] = $this->getField($billingAdress->getStreet1());
+		$payDataOperacion ['CSBTSTATE'] =  "AR"; //strtoupper(substr($this->getField($billingAdress->getCity()),0,1)); //strtoupper(substr($this->getField($billingAdress->getRegion()),0,1));
+		$payDataOperacion ['CSBTSTREET1'] = substr($this->getField($billingAdress->getStreet1()),0,55);
 		$payDataOperacion ['CSBTSTREET2'] = $this->getField($billingAdress->getStreet2());
 		$payDataOperacion ['CSPTCURRENCY'] = 'ARS';//$this->getField($this->order->getBaseCurrencyCode());
 		$payDataOperacion ['CSPTGRANDTOTALAMOUNT'] = number_format($this->order->getGrandTotal(), 2, ".", "");

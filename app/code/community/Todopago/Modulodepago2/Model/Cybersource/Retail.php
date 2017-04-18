@@ -16,8 +16,8 @@ class Todopago_Modulodepago2_Model_Cybersource_Retail extends Todopago_Modulodep
         $payDataOperacion ['CSSTLASTNAME'] = $this->getField($shippingAdress->getLastname());
         $payDataOperacion ['CSSTPHONENUMBER'] = $this->getField($shippingAdress->getTelephone());
         $payDataOperacion ['CSSTPOSTALCODE'] = $this->getField($shippingAdress->getPostcode());
-        $payDataOperacion ['CSSTSTATE'] = strtoupper(substr($this->getField($shippingAdress->getRegion()), 0, 1));
-        $payDataOperacion ['CSSTSTREET1'] =$this->getField($shippingAdress->getStreet1());
+        $payDataOperacion ['CSSTSTATE'] = "AR"; //strtoupper(substr($this->getField($shippingAdress->getRegion()), 0, 1));
+        $payDataOperacion ['CSSTSTREET1'] = substr($this->getField($shippingAdress->getStreet1());, 0, strpos($this->getField($shippingAdress->getStreet1()), ","));
         $payDataOperacion ['CSMDD12'] = Mage::getStoreConfig('payment/modulodepago2/cs_deadline');
         $payDataOperacion ['CSMDD13'] = $this->getField($this->order->getShippingDescription());
                 //$payData ['CSMDD14'] = "";

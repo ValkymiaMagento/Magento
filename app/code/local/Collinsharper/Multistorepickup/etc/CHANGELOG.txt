@@ -1,0 +1,9 @@
+20151201- version 0.7.3
+Chris Harper <charper@collinsharper.com>
+
+Update module to allow for 25 stores instead of only 15 stores. Added
+CHANGELOG.txt
+app/code/local/Collinsharper/Multistorepickup/etc/config.xml
+app/code/local/Collinsharper/Multistorepickup/etc/system.xml
+app/code/local/Collinsharper/Multistorepickup/etc/CHANGELOG.txt
+

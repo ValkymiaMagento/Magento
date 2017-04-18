@@ -1,0 +1,8 @@
+<config>
+  <modules>
+    <Collinsharper_Multistorepickup>
+      <active>true</active>
+      <codePool>local</codePool>
+    </Collinsharper_Multistorepickup>
+  </modules>
+</config>

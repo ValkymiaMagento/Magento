@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<config>
+   <default>
+        <carriers>
+            <chmultistorepickupmodule>
+                    <active>1</active>
+					     <allowed_methods>chmpickup01,chmpickup02,chmpickup03,chmpickup04,chmpickup05,chmpickup06,chmpickup07,chmpickup08,chmpickup09,chmpickup10,chmpickup11,chmpickup12,chmpickup13,chmpickup14,chmpickup15,chmpickup16,chmpickup17,chmpickup18,chmpickup19,chmpickup20,chmpickup21,chmpickup22,chmpickup23,chmpickup24,chmpickup25</allowed_methods>
+						<methods>chmpickup01,chmpickup02,chmpickup03,chmpickup04,chmpickup05,chmpickup06,chmpickup07,chmpickup08,chmpickup09,chmpickup10,chmpickup11,chmpickup12,chmpickup13,chmpickup14,chmpickup15,chmpickup16,chmpickup17,chmpickup18,chmpickup19,chmpickup20,chmpickup21,chmpickup22,chmpickup23,chmpickup24,chmpickup25</methods>
+                    <sallowspecific>0</sallowspecific>
+<model>Collinsharper_Multistorepickup_Model_Carrier_ShippingMethod</model>
+                    <name>Multi Store Pickup</name>
+                    <title>Multi Store Pickup</title>
+                    <specificerrmsg>
+This shipping method is currently unavailable.
+If you would like to ship using this shipping
+method, please contact us.
+                    </specificerrmsg>
+                    <handling_type>F</handling_type>
+            </chmultistorepickupmodule>
+        </carriers>
+    </default>
+	<modules>
+    <Collinsharper_Multistorepickup>
+      <version>0.7.3</version>
+    </Collinsharper_Multistorepickup>
+  </modules>
+ 
+  <global>
+    <models>
+      <chmultistorepickupmodule>
+        <class>Collinsharper_Multistorepickup_Model</class>
+      </chmultistorepickupmodule>
+    </models>
+   <helpers>
+      <chmultistorepickupmodule>
+        <class>Collinsharper_Multistorepickup_Helper</class>
+      </chmultistorepickupmodule>
+    </helpers>
+ 
+    <resources>
+      <chmultistorepickupmodule_setup>
+        <setup>
+          <module>Collinsharper_Multistorepickup</module>
+        </setup>
+        <connection>
+          <use>core_setup</use>
+        </connection>
+      </chmultistorepickupmodule_setup>
+    </resources>
+  </global>
+</config>

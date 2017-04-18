@@ -40,10 +40,10 @@
             </db>
             <default_setup>
                 <connection>
-                    <host><![CDATA[localhost]]></host>
-                    <username><![CDATA[root]]></username>
-                    <password><![CDATA[123456]]></password>
-                    <dbname><![CDATA[valky]]></dbname>
+                    <host><![CDATA[10.132.20.137]]></host>
+                    <username><![CDATA[valkymia]]></username>
+                    <password><![CDATA[86pgj4dMCLVAJvFQP5eMphAw6Nuz]]></password>
+                    <dbname><![CDATA[valkymia_prod]]></dbname>
                     <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
                     <model><![CDATA[mysql4]]></model>
                     <type><![CDATA[pdo_mysql]]></type>
